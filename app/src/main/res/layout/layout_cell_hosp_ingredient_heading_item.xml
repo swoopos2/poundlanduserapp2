@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_arriving"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:baselineAligned="false">
+
+        <TextView
+            android:id="@+id/tv_modifier_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingEnd="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:text="Heading Ingre"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_11sdp"
+            android:paddingStart="@dimen/_5sdp"
+            />
+
+        <TextView
+            android:id="@+id/tv_select_qty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_modifier_name"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_3sdp"
+            android:text="Select info"
+            android:textColor="@color/color_light_red"
+            android:textSize="@dimen/_10sdp" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_modifier_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_select_qty"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tool:listitem="@layout/layout_cell_hosp_ingredient_inner" />
+
+    </RelativeLayout>
+</layout>

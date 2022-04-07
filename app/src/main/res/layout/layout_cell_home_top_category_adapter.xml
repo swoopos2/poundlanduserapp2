@@ -1,0 +1,77 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/rl_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_2sdp"
+        android:gravity="center"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:orientation="vertical">
+        <!--
+
+                <LinearLayout
+                    android:id="@+id/ll_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/white_filled_rounded_rect"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_80sdp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:maxWidth="@dimen/_80sdp"
+                        android:maxHeight="@dimen/_80sdp"
+                        android:src="@drawable/default_image_small" />
+                </LinearLayout>
+        -->
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ll_img"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_margin="4dp"
+            android:elevation="5dp"
+            android:gravity="center"
+            app:cardCornerRadius="5dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_app_icon" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_img"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:freezesText="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="Item Name"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_9sdp" />
+
+
+    </LinearLayout>
+</layout>

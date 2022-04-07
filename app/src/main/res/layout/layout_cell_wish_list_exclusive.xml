@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_arriving"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/rl_item_image"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_80sdp">
+                <ImageView
+                    android:id="@+id/iv_cat_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_app_icon"
+                    android:scaleType="centerInside"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/rl_message_counter"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/rl_item_image">
+
+                <TextView
+                    android:id="@+id/tv_item_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="iPhone 6"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:textColor="@color/color_black_light"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/tv_store_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_item_name"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="iPhone store"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:textColor="@color/hint_grey"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_store_name"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:drawableStart="@drawable/ic_location_nearby"
+                    android:drawableTint="@color/color_black"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text=""
+                    android:textColor="@color/hint_grey"
+                    android:textSize="@dimen/_11sdp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/color_black_light"
+                android:textSize="@dimen/_11sdp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_message_counter"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tv_price"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:background="@drawable/circle_sea_green_drawable">
+
+
+                <TextView
+                    android:id="@+id/tv_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_9sdp" />
+
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/iv_favo"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_below="@+id/rl_message_counter"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_favorite"
+                android:visibility="gone"
+                android:tint="@color/hint_grey"/>
+          
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

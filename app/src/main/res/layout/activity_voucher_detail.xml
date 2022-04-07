@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.LoyaltyStampVoucherActivity">
+
+    <RelativeLayout
+        style="@style/parentLayout"
+        android:background="@color/color_white">
+
+        <RelativeLayout
+            android:id="@+id/rl_main"
+            style="@style/app_color_strip">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:src="@drawable/ic_back"
+                android:tint="@color/color_white" />
+
+            <!--  <ImageView
+                  android:id="@+id/iv_notification"
+                  android:layout_width="@dimen/_30sdp"
+                  android:layout_height="@dimen/_30sdp"
+                  android:layout_toStartOf="@+id/iv_cart"
+                  android:layout_centerVertical="true"
+                  android:layout_marginEnd="@dimen/_5sdp"
+                  android:src="@drawable/ic_notifications"
+                  android:tint="@color/color_white" />
+
+              <ImageView
+                  android:id="@+id/iv_cart"
+                  android:layout_width="@dimen/_30sdp"
+                  android:layout_height="@dimen/_30sdp"
+                  android:layout_alignParentEnd="true"
+                  android:layout_centerVertical="true"
+                  android:layout_marginEnd="@dimen/_5sdp"
+                  android:padding="@dimen/_3sdp"
+                  android:src="@drawable/ic_shopping_cart"
+                  android:tint="@color/color_white" />-->
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/iv_back"
+                android:fontFamily="@font/montserrat_medium"
+                android:maxLines="1"
+                android:text="@string/voucher_details"
+                android:textAllCaps="false"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_14sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_lower"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_main"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_voucher_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/tv_price_count"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/color_black_light"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/tv_price_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:textColor="@color/color_black_light"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/tv_venue_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_voucher_name"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/color_black_light"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tv_valid_on_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_venue_name"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_toStartOf="@+id/tv_expire"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/color_black_light"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/tv_expire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_venue_name"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/expire"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_10sdp" />
+
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/iv_qr_code"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_below="@+id/rl_detail"
+                android:layout_margin="@dimen/_5sdp" />
+
+            <TextView
+                android:id="@+id/tv_qr_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_qr_code"
+                android:layout_margin="@dimen/_10sdp"
+                android:gravity="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/voucher_qr_scan_message"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/_10sdp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</layout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardElevation="4dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:paddingTop="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_app_icon" />
+
+
+            <TextView
+                android:id="@+id/tv_version_of_swoope_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:layout_below="@+id/iv_logo"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:text="@string/version_of_swoope_app"
+                android:textColor="@color/app_header_color"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/tv_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/light_red_filled_rounded_rect"
+                android:layout_below="@+id/tv_version_of_swoope_app"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:paddingTop="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_12sdp"
+                android:paddingStart="@dimen/_45sdp"
+                android:paddingEnd="@dimen/_45sdp"
+                android:layout_centerInParent="true"
+                android:text="@string/ok"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_13sdp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

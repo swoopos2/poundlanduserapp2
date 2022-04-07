@@ -1,0 +1,123 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_3sdp"
+        android:padding="@dimen/_2sdp">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_img"
+            android:elevation="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            app:cardElevation="4dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_product_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_90sdp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_app_icon" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/app_header_color_trans"
+                    android:paddingStart="@dimen/_2sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_2sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="@string/pound_2_5"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_9sdp" />
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_store_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cv_img"
+            android:fontFamily="@font/montserrat_medium"
+            android:paddingStart="@dimen/_5sdp"
+            android:text="Store Name"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:textColor="@color/color_black_light"
+            android:textSize="@dimen/_9sdp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@+id/tv_store_name"
+            android:background="@color/color_et_bg"
+            android:layerType="software"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp" />
+
+
+        <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:ellipsize="end"
+            android:gravity="center|start"
+            android:fontFamily="@font/montserrat_medium"
+            android:maxLines="2"
+            android:minLines="2"
+            android:paddingStart="@dimen/_5sdp"
+            android:text="Item Name"
+            android:textColor="@color/color_black_light"
+            android:textSize="@dimen/_8sdp" />
+
+        <RatingBar
+            android:id="@+id/rb_rating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_product_name"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:backgroundTint="@color/dark_grey"
+            android:fitsSystemWindows="true"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressTint="@color/color_yellow"
+            android:stepSize=".5" />
+
+        <TextView
+            android:id="@+id/tv_add_to_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rb_rating"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_9sdp"
+            android:elevation="@dimen/_2sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:background="@color/app_header_color_"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="@string/add_to_cart" />
+
+
+    </RelativeLayout>
+</layout>

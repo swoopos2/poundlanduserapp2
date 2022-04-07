@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/color_et_bg"
+        android:layout_margin="@dimen/_5sdp"
+        app:cardElevation="5dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:layout_margin="@dimen/_2sdp">
+
+
+            <TextView
+                android:id="@+id/tv_mov"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/more_for_home_deliver"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:textColor="@color/color_black_light"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/tv_free"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_mov"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/more_for_free_deliver"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:textColor="@color/color_black_light"
+                android:textSize="@dimen/_12sdp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

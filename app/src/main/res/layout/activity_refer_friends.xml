@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.TermConditionActivity">
+
+    <RelativeLayout
+        style="@style/parentLayout"
+        android:background="@color/color_white">
+
+        <RelativeLayout
+            android:id="@+id/rl_main"
+            style="@style/app_color_strip">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/iv_back"
+                android:fontFamily="@font/montserrat_medium"
+                android:maxLines="1"
+                android:text="@string/refer_a_friend"
+                android:textAllCaps="false"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_15sdp" />
+
+            <ImageView
+                android:id="@+id/iv_cart"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_shopping_cart"
+               />
+
+            <TextView
+                android:id="@+id/tv_cart_count"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/circle_red_drawable"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_8sdp" />
+
+            <!-- <ImageView
+                 android:id="@+id/iv_cart"
+                 android:layout_width="@dimen/_30sdp"
+                 android:layout_height="@dimen/_30sdp"
+                 android:layout_alignParentEnd="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginEnd="@dimen/_5sdp"
+                 android:padding="@dimen/_3sdp"
+                 android:src="@drawable/ic_shopping_cart"
+                 android:tint="@color/color_white" />-->
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_main"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/refer_bg"
+            android:gravity="center"
+            android:padding="@dimen/_20sdp">
+
+            <RelativeLayout
+                android:id="@+id/rl_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="@dimen/_30sdp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_app_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/app_logo_poundland"
+                    />
+
+              <!--  <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/iv_app_logo"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/app_name"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_22sdp" />-->
+
+                <TextView
+                    android:id="@+id/tv_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_app_logo"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="The savy way to order and pay"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_10sdp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_reffer_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_message"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@drawable/transparent__rect"
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingStart="@dimen/_35sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_35sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="LE0125785"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_26sdp" />
+
+            <TextView
+                android:id="@+id/tv_offer_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_reffer_code"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="@dimen/_20sdp"
+                android:text="@string/dummy_item_offer_message"
+                android:textAlignment="center"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/tv_refer_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_offer_message"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/dummy_item_refer_message"
+                android:textAlignment="center"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_10sdp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/rl_share"
+            android:layout_centerInParent="true"
+            android:background="@drawable/light_red_filled_rounded_rect"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:paddingStart="@dimen/_60sdp"
+            android:paddingEnd="@dimen/_60sdp"
+            android:text="@string/share"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_18sdp" />
+
+    </RelativeLayout>
+
+</layout>

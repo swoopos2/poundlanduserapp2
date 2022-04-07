@@ -1,0 +1,122 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="?android:attr/activatedBackgroundIndicator"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall">
+
+       <!-- <RelativeLayout
+            android:id="@+id/rl_profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_110sdp"
+                app:cardBackgroundColor="@color/app_header_color"
+                app:cardCornerRadius="@dimen/_250sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="@dimen/_110sdp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="@dimen/_250sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_profile_image"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_110sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash_center_image" />
+
+                    <ImageView
+                        android:id="@+id/iv_edit_profile"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:scaleType="centerCrop"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_75sdp"
+                        android:layout_marginTop="@dimen/_80sdp"
+                        android:background="@drawable/circle_red_drawable"
+                        android:src="@android:drawable/ic_menu_edit" />
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_profile_image"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="John Smith"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_16sdp" />
+
+        <TextView
+            android:id="@+id/tv_user_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_user_name"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center"
+            android:text="13,South Avenue,Birmingham\nBMI8789"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_11sdp" />
+-->
+        <RelativeLayout
+            android:id="@+id/rl_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/activatedBackgroundIndicator"
+            android:minHeight="?android:attr/listPreferredItemHeightSmall"
+            android:padding="@dimen/_5sdp">
+
+           <!-- <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/border_color" />-->
+
+            <ImageView
+                android:id="@+id/imageViewIcon"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                app:tint="@color/app_header_color"
+                android:src="@drawable/ic_home" />
+
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/imageViewIcon"
+                android:paddingStart="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:text="Item Name"
+                android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                android:textColor="@android:color/black" />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rl_main"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/border_color" />
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_6sdp"
+        app:cardBackgroundColor="@color/color_page_bg"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_3sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_3sdp">
+
+            <ImageView
+                android:id="@+id/iv_product_img"
+                android:layout_width="55dp"
+                android:layout_height="69dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="23dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_app_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/iv_product_img"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/app_header_color"
+                    android:textSize="@dimen/_9sdp" />
+
+                <RatingBar
+                    android:id="@+id/rb_rateProduct"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/dark_grey"
+                    android:fitsSystemWindows="true"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:progressTint="@color/color_yellow"
+                    android:stepSize=".5" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

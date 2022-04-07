@@ -1,0 +1,58 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:background="@color/window_bg"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            style="@style/parentLayout">
+
+            <include
+                android:id="@+id/include_toolbar"
+                layout="@layout/layout_toolbar" />
+
+            <FrameLayout
+                android:id="@+id/main_container"
+                style="@style/parentFrame"
+                android:layout_below="@+id/include_toolbar"
+                android:tag="@string/menu" />
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="@color/color_white"
+                android:fitsSystemWindows="true"
+                android:nestedScrollingEnabled="true"
+                app:headerLayout="@layout/nav_header_main"
+                app:itemIconTint="@color/drawer_tint_color"
+                app:itemTextColor="@color/dark_grey">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/left_drawer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="@dimen/_210sdp"
+                    android:background="#FFFFFF"
+                    android:choiceMode="singleChoice"
+                    android:divider="@android:color/darker_gray"
+                    android:dividerHeight="1dp" />
+
+            </com.google.android.material.navigation.NavigationView>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

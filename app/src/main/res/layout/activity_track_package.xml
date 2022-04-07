@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_main"
+            style="@style/app_color_strip">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:src="@drawable/ic_back"
+                app:tint="@color/color_white" />
+
+            <ImageView
+                android:id="@+id/iv_cart"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_shopping_cart"
+                app:tint="@color/color_white"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/iv_back"
+                android:fontFamily="@font/montserrat_medium"
+                android:maxLines="1"
+                android:text="@string/track_order"
+                android:textAllCaps="false"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_14sdp" />
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_main">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:buttonTint="@color/app_header_color"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/arriving"
+                    android:textColor="@color/app_header_color"
+                    android:textSize="@dimen/_13sdp" />
+
+                 <ImageView
+                    android:id="@+id/iv_image_product"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_below="@+id/tv_status"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/color_white"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_app_icon" />
+
+                <TextView
+                    android:id="@+id/tv_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_image_product"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:background="@drawable/grey_rect_border_drawable"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:textColor="@color/color_black_light"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_quantity"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:background="@drawable/red_rect_border_drawable"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/cancel"
+                    android:textColor="@color/color_light_red"/>
+
+                <CheckBox
+                    android:id="@+id/tv_day_of_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/iv_image_product"
+                    android:layout_below="@+id/tv_status"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:buttonTint="@color/app_header_color"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/placed"
+                    android:textColor="@color/color_pink"
+                    android:textSize="@dimen/_11sdp" />
+
+                <View
+                    android:id="@+id/v_div"
+                    android:layout_width="3dp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_below="@+id/tv_day_of_order"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/dotted_line_vertical"
+                    android:layerType="software" />
+
+                <CheckBox
+                    android:id="@+id/tv_acknowledge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/v_div"
+                    android:layout_toStartOf="@+id/iv_image_product"
+                    android:buttonTint="@color/app_header_color"
+                    android:checked="false"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/acknowledged"
+                    android:textColor="@color/hint_grey"
+                    android:textSize="@dimen/_11sdp" />
+
+                <View
+                    android:id="@+id/v_divid"
+                    android:layout_width="3dp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_below="@+id/tv_acknowledge"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/dotted_line_vertical"
+                    android:layerType="software" />
+
+                <CheckBox
+                    android:id="@+id/tv_shiped"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/v_divid"
+                    android:buttonTint="@color/app_header_color"
+                    android:checked="false"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/shiped"
+                    android:textColor="@color/hint_grey"
+                    android:textSize="@dimen/_11sdp" />
+
+                <View
+                    android:id="@+id/v_div1"
+                    android:layout_width="3dp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_below="@+id/tv_shiped"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/dotted_line_vertical"
+                    android:layerType="software" />
+
+                <CheckBox
+                    android:id="@+id/tv_completed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/v_div1"
+                    android:buttonTint="@color/app_header_color"
+                    android:checked="false"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/completed"
+                    android:textColor="@color/hint_grey"
+                    android:textSize="@dimen/_11sdp" />
+
+                <View
+                    android:id="@+id/v_cancel"
+                    android:layout_width="3dp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_below="@+id/tv_completed"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/dotted_line_vertical"
+                    android:layerType="software" />
+
+                <CheckBox
+                    android:id="@+id/tv_cancelled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/v_cancel"
+                    android:layout_toStartOf="@+id/iv_image_product"
+                    android:buttonTint="@color/app_header_color"
+                    android:checked="false"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/cancelled"
+                    android:textColor="@color/hint_grey"
+                    android:textSize="@dimen/_11sdp" />
+
+                <View
+                    android:id="@+id/v_refunded"
+                    android:layout_width="3dp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_below="@+id/tv_cancelled"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/dotted_line_vertical"
+                    android:layerType="software" />
+
+                <CheckBox
+                    android:id="@+id/tv_refunded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/v_refunded"
+                    android:buttonTint="@color/app_header_color"
+                    android:layout_toStartOf="@+id/iv_image_product"
+                    android:checked="false"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/refunded"
+                    android:textColor="@color/hint_grey"
+                    android:textSize="@dimen/_11sdp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_shipping_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_refunded"
+                    android:layout_marginTop="@dimen/_70sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/white_filled_rect"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15sdp">
+
+                    <TextView
+                        android:id="@+id/tv_shipping_address_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/shipping_address"
+                        android:textColor="@color/color_black_light"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:id="@+id/tv_shipping_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="john deo\n123, palace streat,lancashire,\nEngland (U.K.)"
+                        android:textColor="@color/black_overlay"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_view_order_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_shipping_address"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:background="@drawable/white_filled_rect"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:padding="@dimen/_15sdp"
+                    android:text="Go To My Orders →"
+                    android:textColor="@color/app_header_color"
+                    android:textSize="@dimen/_12sdp" />
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+</layout>

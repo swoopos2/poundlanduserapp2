@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardElevation="4dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_16sdp">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@drawable/ic_app_icon" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_alignParentEnd="true"
+                app:tint="@color/color_light_red"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/ic_delete" />
+
+            <ImageView
+                android:id="@+id/iv_qr_code"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/iv_logo"
+                android:layout_marginBottom="@dimen/_5sdp" />
+
+            <TextView
+                android:id="@+id/tv_qr_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:layout_below="@+id/iv_qr_code"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:textColor="@color/color_black_light"
+                android:textSize="@dimen/_11sdp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_arriving"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:baselineAligned="false"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_modifier_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingStart="@dimen/_15sdp"
+                android:drawableTint="@color/color_white"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:background="@color/app_header_color"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_12sdp" />
+            <!--  android:drawableStart="@drawable/ic_discount"-->
+
+            <ImageView
+                android:id="@+id/iv_expand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="25dp"
+                android:src="@drawable/ic_down_arrow"
+                android:tint="@color/color_white" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_modifier_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:visibility="gone"
+                android:layout_below="@+id/tv_modifier_name"
+                android:clipToPadding="false" />
+
+        </RelativeLayout>
+
+
+
+</layout>

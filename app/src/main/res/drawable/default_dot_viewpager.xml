@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:innerRadius="@dimen/_3sdp"
+            android:shape="ring"
+            android:thickness="@dimen/_1sdp"
+            android:useLevel="false">
+            <solid android:color="@android:color/darker_gray" />
+        </shape>
+    </item>
+</layer-list>-->
+
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thickness="@dimen/_4sdp"
+            android:useLevel="false">
+            <solid android:color="@color/hint_grey" />
+        </shape>
+    </item>
+</layer-list>

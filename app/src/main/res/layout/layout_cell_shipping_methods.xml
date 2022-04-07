@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_1sdp"
+        android:layout_marginEnd="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        app:cardBackgroundColor="@color/color_white"
+        android:clickable="true"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:gravity="center"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingStart="@dimen/_1sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_1sdp"
+            >
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_same_day_delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:buttonTint="@color/app_header_color"
+                android:clickable="false" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_same_day_delivery"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_23sdp"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/cb_same_day_delivery"
+                android:src="@drawable/ic_same_day_delivery" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_toEndOf="@+id/iv_same_day_delivery">
+
+                <TextView
+                    android:id="@+id/tv_same_day_delivery_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="start|center"
+                    android:text="@string/same_day_delivery"
+                    android:textColor="@color/app_header_color"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/tv_same_day_delivery_cost_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_toEndOf="@+id/tv_same_day_delivery_cost"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="start|center"
+                    android:textColor="@color/color_red"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/tv_delivery_within"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_same_day_delivery_cost"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/get_delivery"
+                    android:textColor="@color/color_black_light_extra"
+                    android:textSize="@dimen/_8sdp" />
+
+                <TextView
+                    android:id="@+id/tv_delivery_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_same_day_delivery_cost"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_toEndOf="@+id/tv_delivery_within"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="Today"
+                    android:textColor="@color/color_black_light"
+                    android:textSize="@dimen/_8sdp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_order_within"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_same_day_delivery_cost"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_toEndOf="@+id/tv_delivery_day"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/Order_within"
+                    android:textColor="@color/color_black_light_extra"
+                    android:textSize="@dimen/_8sdp" />
+
+                <TextView
+                    android:id="@+id/tv_expiry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:minWidth="@dimen/_50sdp"
+                    android:layout_below="@+id/tv_same_day_delivery_cost"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:paddingEnd="@dimen/_3sdp"
+                    android:layout_toEndOf="@+id/tv_order_within"
+                    android:background="@drawable/red_rect_border_round_drawable"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:textColor="@color/color_red"
+                    android:textSize="@dimen/_9sdp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

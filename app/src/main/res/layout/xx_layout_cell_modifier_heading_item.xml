@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_arriving"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:baselineAligned="false">
+
+        <TextView
+            android:id="@+id/tv_modifier_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_2sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/color_black"
+            android:text="Heading Mod"
+            android:textSize="@dimen/_11sdp" />
+
+        <ImageView
+            android:id="@+id/iv_expand"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_toEndOf="@+id/tv_modifier_name"
+            android:src="@drawable/ic_star"
+            app:tint="@color/color_red" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_modifier_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_below="@+id/tv_modifier_name"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:clipToPadding="false" />
+
+
+    </RelativeLayout>
+
+
+
+</layout>
