@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="4dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_rect_border_app_color_drawable"
+            android:padding="@dimen/_10sdp">
+
+
+            <TextView
+                android:id="@+id/tv_total_loyalty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/_11sdp" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@+id/tv_total_loyalty"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_1sdp"
+                android:layout_centerInParent="true"
+                android:baselineAligned="false">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/password_text_input"
+                    style="@style/TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_Loyalty_point"
+                    app:hintAnimationEnabled="true"
+                    android:textColorHint="@color/hint_grey"
+                    app:boxStrokeColor="@color/app_header_color"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_loyalty"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:maxLines="1"
+                        android:textColor="@color/color_black"
+                        android:inputType="numberDecimal"
+                        android:textSize="@dimen/_11sdp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/btnOkay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:text="@android:string/ok"
+                android:textAllCaps="true"
+                android:textColor="@color/app_header_color"
+                android:textSize="@dimen/_13sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/rl_comment"/>
+
+            <TextView
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:text="@android:string/cancel"
+                android:textAllCaps="true"
+                android:textColor="@color/color_red"
+                android:textSize="@dimen/_13sdp"
+                android:layout_toStartOf="@+id/btnOkay"
+                android:layout_below="@+id/rl_comment" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

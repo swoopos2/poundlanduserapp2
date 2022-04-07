@@ -1,0 +1,21 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_1sdp"
+        android:padding="@dimen/_1sdp"
+        android:gravity="center"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall">
+
+        <ImageView
+            android:id="@+id/textViewName"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/ic_app_icon"
+            android:background="@color/color_white"
+            android:scaleType="centerInside"/>
+
+    </RelativeLayout>
+</layout>

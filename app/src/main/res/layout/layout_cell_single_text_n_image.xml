@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_3sdp"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:paddingTop="@dimen/_3sdp"
+            android:paddingBottom="@dimen/_3sdp"
+            android:paddingStart="@dimen/_4sdp"
+            android:paddingEnd="@dimen/_4sdp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_allery_img"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_block" />
+
+            <TextView
+                android:id="@+id/tv_allergy_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_toEndOf="@+id/iv_allery_img"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/color_black_light"
+                android:text="hvvbvv"
+                android:paddingEnd="@dimen/_4sdp"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/_9sdp" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

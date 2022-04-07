@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<!--
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_my_cart_d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="@dimen/_3sdp"
+        app:cardElevation="3dp">-->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/_2sdp">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/_2sdp"
+                    app:srcCompat="@drawable/ic_icon__cart"
+                    app:backgroundTint="@color/colorPrimaryDark" />
+                <TextView
+                    android:id="@+id/text_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="7dp"
+                    android:gravity="center"
+                    android:layout_toStartOf="@+id/fab_cart"
+                    android:textColor="@color/black_overlay"
+                   android:layout_marginEnd="@dimen/_minus10sdp"
+                    android:textSize="9dp"
+                    android:background="@drawable/circle2_black_drawable"
+                    tools:text="10" />
+            </RelativeLayout>
+
+
+           <!-- <RelativeLayout
+                android:id="@+id/rl_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_100sdp"
+                android:paddingTop="@dimen/_100sdp">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_update_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/app_colored_filled_rounded_rect"
+                    android:padding="@dimen/_5sdp">
+
+
+                    <ImageView
+                        android:id="@+id/tv_subtractItem"
+                        android:layout_width="@dimen/_22sdp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:background="@drawable/circle_light_grey_drawable"
+                        android:padding="@dimen/_7sdp"
+                        android:src="@drawable/ic_minus"
+                        android:textColor="@color/color_black" />
+
+
+                    <TextView
+                        android:id="@+id/tv_itemCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toEndOf="@+id/tv_subtractItem"
+                        android:fontFamily="@font/montserrat_extra_bold"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:text="1"
+                        android:textColor="@color/color_white"
+                         />
+
+                    <ImageView
+                        android:id="@+id/tv_addItem"
+                        android:layout_width="@dimen/_22sdp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:layout_toEndOf="@+id/tv_itemCount"
+                        android:background="@drawable/circle_light_grey_drawable"
+                        android:padding="@dimen/_3sdp"
+                        android:src="@drawable/ic_add" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>-->
+
+
+        </RelativeLayout>
+
+<!--
+    </androidx.cardview.widget.CardView>-->
+
+
+</layout>

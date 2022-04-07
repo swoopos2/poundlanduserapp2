@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:layout_marginEnd="@dimen/_10sdp">
+
+
+        <!-- android:background="@drawable/chatpatch_up"
+            android:backgroundTint="@color/color_et_bg"-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_grey_drawable"
+            android:orientation="vertical"
+            android:layout_toStartOf="@+id/iv_profile"
+            android:layout_margin="@dimen/_5sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:paddingTop="@dimen/_2sdp">
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:gravity="end"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/message"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_message"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/hint_grey"
+                android:textSize="@dimen/_8sdp" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_message"
+                android:layout_gravity="end"
+                android:text="@string/you"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/hint_grey"
+                android:textSize="@dimen/_8sdp" />
+
+        </RelativeLayout>
+<!--<de.hdodenhof.circleimageview.CircleImageView-->
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/profile_placeholder"
+            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</layout>

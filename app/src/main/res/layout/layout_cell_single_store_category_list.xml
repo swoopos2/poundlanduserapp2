@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<androidx.cardview.widget.CardView
+        android:id="@+id/cv_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:cardBackgroundColor="@color/color_page_bg"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="2dp">-->
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_2sdp"
+        android:gravity="center"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall">
+
+        <!-- <ImageView
+             android:id="@+id/iv_same_day_delivery"
+             android:layout_width="@dimen/_40sdp"
+             android:layout_height="@dimen/_40sdp"
+             android:padding="@dimen/_5sdp"
+             android:src="@drawable/ic_same_day_delivery"
+             android:layout_marginStart="@dimen/_105sdp" />-->
+
+        <LinearLayout
+            android:id="@+id/ll_img"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="false"
+            android:background="@drawable/white_filled_rounded_rect"
+            android:gravity="center"
+            android:padding="@dimen/_2sdp">
+
+            <ImageView
+                android:id="@+id/iv_cat_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_90sdp"
+                android:adjustViewBounds="true"
+                android:minWidth="@dimen/_80sdp"
+                android:minHeight="@dimen/_80sdp"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_app_icon" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_cat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_img"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:freezesText="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="Item Name"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_9sdp" />
+
+    </RelativeLayout>
+    <!-- </androidx.cardview.widget.CardView>-->
+
+</layout>

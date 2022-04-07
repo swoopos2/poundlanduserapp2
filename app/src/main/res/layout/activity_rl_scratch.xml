@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <!--CardView added ony for round edges-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_gravity="center"
+        android:clipChildren="true"
+        app:cardBackgroundColor="@color/color_white"
+        android:gravity="center"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <com.goibibo.libs.views.ScratchRelativeLayoutView
+                android:id="@+id/scratch_card"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_centerInParent="true"
+                android:background="@color/color_light_red">
+
+                <include layout="@layout/lyt_hidden" />
+
+            </com.goibibo.libs.views.ScratchRelativeLayoutView>
+
+            <TextView
+                android:id="@+id/tv_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scratch_card"
+                android:layout_marginTop="@dimen/_90sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/light_red_filled_rounded_rect"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:paddingStart="@dimen/_45sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_45sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                android:text="@string/done"
+                android:textAllCaps="false"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_13sdp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</layout>

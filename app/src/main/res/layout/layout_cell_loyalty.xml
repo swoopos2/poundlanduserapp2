@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_main"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:minHeight="@dimen/_105sdp"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="@dimen/_1sdp"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/iv_venue_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/ic_app_icon"
+                android:scaleType="centerInside"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight=".3"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_venue_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/tv_points_count"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:padding="@dimen/_5sdp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:id="@+id/tv_points_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/tv_points"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        android:textColor="@color/app_header_color"
+                        android:textSize="@dimen/_18sdp" />
+
+                    <TextView
+                        android:id="@+id/tv_points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="Points"
+                        android:textColor="@color/app_header_color"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_venue_name"
+                        android:layout_toStartOf="@+id/tv_price_count"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_11sdp" />
+                    <TextView
+                        android:id="@+id/tv_price_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_venue_name"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:id="@+id/tv_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_venue_name"
+                        android:drawablePadding="@dimen/_1sdp"
+                        app:drawableTint="@color/app_color_2"
+                        android:layout_toStartOf="@+id/tv_price"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_11sdp"
+                        app:drawableStartCompat="@drawable/ic_location" />
+
+                    <View
+                        android:id="@+id/v_div"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_below="@+id/tv_distance"
+                        android:alpha=".7"
+                        android:background="@drawable/dotted_line"
+                        android:layerType="software" />
+
+
+                    <TextView
+                        android:id="@+id/tv_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/v_div"
+                        android:layout_toStartOf="@+id/tv_shop_now"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:id="@+id/tv_shop_now"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/v_div"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/red_filled_rounded_rect"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingEnd="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="@string/shop_now"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/_11sdp" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+             <TextView
+                 android:id="@+id/tv_deal_name"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:drawablePadding="@dimen/_10sdp"
+                 android:fontFamily="@font/montserrat_regular"
+                 android:padding="@dimen/_10sdp"
+                 android:paddingStart="@dimen/_18sdp"
+                 android:paddingEnd="@dimen/_15sdp"
+                 android:text="Deal name"
+                 android:textColor="@color/dark_grey"
+                 android:textSize="@dimen/_12sdp" />
+
+             <View
+                 android:id="@+id/v_div"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/_1sdp"
+                 android:layout_below="@+id/tv_deal_name" />
+
+
+             <TextView
+                 android:id="@+id/tv_venue_name"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/v_div"
+                 android:drawablePadding="@dimen/_10sdp"
+                 android:fontFamily="@font/montserrat_regular"
+                 android:paddingStart="@dimen/_18sdp"
+                 android:paddingTop="@dimen/_10sdp"
+                 android:paddingEnd="@dimen/_15sdp"
+                 android:paddingBottom="@dimen/_3sdp"
+                 android:text="Food Court Plaza"
+                 android:textColor="@color/dark_grey"
+                 android:textSize="@dimen/_11sdp" />
+
+             <TextView
+                 android:id="@+id/tv_shop_loc"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/tv_venue_name"
+                 android:fontFamily="@font/montserrat_regular"
+                 android:paddingStart="@dimen/_18sdp"
+                 android:paddingTop="@dimen/_3sdp"
+                 android:paddingEnd="@dimen/_15sdp"
+                 android:text="121, Lorem Garden, Boston"
+                 android:textColor="@color/dark_grey"
+                 android:textSize="@dimen/_10sdp" />
+
+             <ImageView
+                 android:id="@+id/iv_wallet_qr"
+                 android:layout_width="@dimen/_120sdp"
+                 android:layout_height="@dimen/_120sdp"
+                 android:layout_alignParentEnd="true"
+                 android:layout_marginTop="@dimen/_40sdp"
+                 android:layout_marginBottom="@dimen/_5sdp"
+                 android:paddingStart="@dimen/_20sdp"
+                 android:paddingTop="@dimen/_15sdp"
+                 android:paddingEnd="@dimen/_20sdp"
+                 android:paddingBottom="@dimen/_10sdp"
+                 android:src="@drawable/splash_bg" />
+
+             <TextView
+                 android:id="@+id/tv_deal_exp_date"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/tv_shop_loc"
+                 android:layout_alignParentStart="true"
+                 android:layout_marginBottom="@dimen/_10sdp"
+                 android:fontFamily="@font/montserrat_regular"
+                 android:padding="@dimen/_10sdp"
+                 android:paddingStart="@dimen/_18sdp"
+                 android:paddingEnd="@dimen/_15sdp"
+                 android:paddingBottom="@dimen/_10sdp"
+                 android:text="anme"
+                 android:textColor="@color/dark_grey"
+                 android:textSize="@dimen/_11sdp" />
+
+
+         </RelativeLayout>-->
+
+    </androidx.cardview.widget.CardView>
+</layout>

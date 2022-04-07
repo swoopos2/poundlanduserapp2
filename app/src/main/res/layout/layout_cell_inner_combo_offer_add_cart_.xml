@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_160sdp"
+        android:minHeight="@dimen/_120sdp">
+
+        <TextView
+            android:id="@+id/tv_plush"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat_bold"
+            android:padding="@dimen/_15sdp"
+            android:text="="
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_20sdp" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tv_plush"
+            android:layout_centerInParent="true"
+            android:baselineAligned="false"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/_2sdp"
+                android:text="@string/total_amount"
+                android:textColor="@color/color_black_light"
+                android:textSize="@dimen/_13sdp" />
+
+
+            <TextView
+                android:id="@+id/tv_total_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:padding="@dimen/_2sdp"
+                android:textColor="@color/color_black_light"
+                android:textSize="@dimen/_13sdp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_add_to_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/ll_item"
+            android:layout_centerInParent="true"
+            android:background="@drawable/light_red_filled_rounded_rect"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:gravity="center"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="@string/add_to_cart"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_12sdp" />
+
+    </RelativeLayout>
+</layout>

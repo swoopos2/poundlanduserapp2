@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardBackgroundColor="@android:color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/rl_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp">
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/color_white"
+                app:cardCornerRadius="@dimen/_15sdp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_20sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_centerHorizontal="true"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_app_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_logo"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center"
+                        android:text="@string/stamp_not_redeemed"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_light_red"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <TextView
+                        android:id="@+id/tv_scratch_view_after"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_heading"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_40sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:text="@string/lorium_ipsum_short"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_black_light"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <com.goibibo.libs.views.ScratchTextView
+                        android:id="@+id/scratch_view_before"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:minHeight="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_40sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_below="@+id/tv_heading"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_black_light"
+                        android:textSize="@dimen/_12sdp"  />
+
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_main"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_minus35sdp"
+            android:background="@drawable/light_red_filled_rounded_rect"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:paddingStart="@dimen/_45sdp"
+            android:paddingTop="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_45sdp"
+            android:paddingBottom="@dimen/_15sdp"
+            android:text="@string/order_now"
+            android:textAllCaps="false"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_13sdp" />
+
+    </RelativeLayout>
+
+
+</layout>

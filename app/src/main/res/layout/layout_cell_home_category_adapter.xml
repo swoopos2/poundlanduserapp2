@@ -1,0 +1,37 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_3sdp"
+        android:background="@drawable/white_filled_rounded_rect"
+        android:gravity="center"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall">
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="Item Name"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:textColor="@color/hint_grey"
+            android:textSize="@dimen/_11sdp" />
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_right_arrow_small"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@+id/textViewName"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</layout>

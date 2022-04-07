@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+        <!--style="@style/parentLayout"-->
+
+        <RelativeLayout
+            android:id="@+id/tb_my_profile"
+            style="@style/app_color_strip">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:src="@drawable/ic_back"
+                app:tint="@color/color_white" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/iv_back"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:maxLines="1"
+                android:text="@string/profile"
+                android:textAllCaps="false"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_14sdp" />
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_below="@+id/tb_my_profile">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_20sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <!--<de.hdodenhof.circleimageview.CircleImageView
+                    app:civ_border_width="@dimen/_1sdp" -->
+                    <ImageView
+                        android:id="@+id/iv_image"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_110sdp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/profile_placeholder"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv_choose_image"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignBottom="@+id/iv_image"
+                        android:layout_marginStart="@dimen/_minus35sdp"
+                        android:layout_toEndOf="@+id/iv_image"
+                        android:background="@drawable/circle_red_drawable"
+                        android:padding="@dimen/_7sdp"
+                        android:src="@android:drawable/ic_menu_camera"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_display_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/white_filled_rounded_rect"
+                    android:drawableStart="@drawable/ic_user"
+                    android:drawableTint="@color/app_header_color"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center|start"
+                    android:text="@string/first_name"
+                    android:textColor="@color/hint_grey"
+                    android:textSize="@dimen/_12sdp" />
+
+                <EditText
+                    android:id="@+id/et_display_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/white_filled_rounded_rect"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:drawableStart="@drawable/ic_user"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableTint="@color/app_header_color"
+                    android:focusable="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="@string/first_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:textColor="@color/color_black_light"
+                    android:textColorHint="@color/hint_grey"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_display_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/white_filled_rounded_rect"
+                    android:drawableStart="@drawable/ic_user"
+                    android:drawableTint="@color/app_header_color"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center|start"
+                    android:text="@string/last_name"
+                    android:textColor="@color/hint_grey"
+                    android:textSize="@dimen/_12sdp" />
+
+                <EditText
+                    android:id="@+id/et_display_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/white_filled_rounded_rect"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:drawableStart="@drawable/ic_user"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableTint="@color/app_header_color"
+                    android:focusable="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="@string/last_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:textColor="@color/color_black_light"
+                    android:textColorHint="@color/hint_grey"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/white_filled_rounded_rect"
+                    android:drawableStart="@drawable/ic_envelope"
+                    android:drawableTint="@color/app_header_color"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center|start"
+                    android:text="@string/email_address"
+                    android:textColor="@color/hint_grey"
+                    android:textSize="@dimen/_12sdp" />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/white_filled_rounded_rect"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:drawableStart="@drawable/ic_envelope"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableTint="@color/app_header_color"
+                    android:focusable="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="@string/email_address"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textColor="@color/color_black_light"
+                    android:textColorHint="@color/hint_grey"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_contact_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/white_filled_rounded_rect"
+                    android:drawableStart="@drawable/ic_mobile"
+                    android:drawableTint="@color/app_header_color"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center|start"
+                    android:text="@string/mobile_number"
+                    android:textColor="@color/hint_grey"
+                    android:textSize="@dimen/_12sdp" />
+
+                <EditText
+                    android:id="@+id/et_contact_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/white_filled_rounded_rect"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:drawableStart="@drawable/ic_mobile"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableTint="@color/app_header_color"
+                    android:focusable="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="@string/mobile_number"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLength="12"
+                    android:maxLines="1"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_black_light"
+                    android:textColorHint="@color/hint_grey"
+                    android:visibility="gone"
+                    android:textSize="@dimen/_12sdp"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+            style="@style/red_bg_strip"
+            android:layout_gravity="bottom"
+            android:gravity="bottom">
+
+            <RelativeLayout
+                android:id="@+id/iv_edit_profile"
+                style="@style/red_bg_strip"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_toStartOf="@+id/tv_Edit_profile"
+                    android:src="@drawable/ic_edit_in_footer"
+                    app:tint="@color/app_color_2" />
+
+                <TextView
+                    android:id="@+id/tv_Edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:maxLines="1"
+                    android:text="@string/edit_profile"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_14sdp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:gravity="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_14sdp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

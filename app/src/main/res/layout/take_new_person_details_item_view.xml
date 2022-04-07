@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/iv_user_image"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/reservation_booking_date_selected"
+                android:padding="6dp"
+                android:src="@drawable/ic_user1"
+                app:tint="@color/color_white" />
+
+            <TextView
+                android:id="@+id/label_available_table"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_toEndOf="@+id/iv_user_image"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Guest Details"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/color_black" />
+
+            <ImageView
+                android:id="@+id/iv_important"
+                android:layout_width="@dimen/_7sdp"
+                android:layout_height="@dimen/_7sdp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_toEndOf="@+id/label_available_table"
+                android:src="@drawable/ic_star"
+                android:visibility="invisible"
+                app:tint="@color/color_light_red" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tv_look_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight=".5"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start|center"
+                android:text="@string/first_name_"
+                android:visibility="gone"
+                android:textColor="@color/color_black_light"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:background="@drawable/white_filled_curved_rect"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/enter_first_name"
+                android:imeActionLabel="Next"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingTop="@dimen/_9sdp"
+                android:paddingBottom="@dimen/_9sdp"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/color_black_light" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight=".5"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start|center"
+                android:text="@string/last_name"
+                android:visibility="gone"
+                android:textColor="@color/color_black_light"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:background="@drawable/white_filled_curved_rect"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/enter_last_name"
+                android:imeActionLabel="Next"
+                android:imeOptions="actionNext"
+                android:inputType="textNoSuggestions|textEmailAddress"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingTop="@dimen/_9sdp"
+                android:paddingBottom="@dimen/_9sdp"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/color_black_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight=".5"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start|center"
+                android:text="@string/mobile_number_"
+                android:visibility="gone"
+                android:textColor="@color/color_black_light"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:background="@drawable/white_filled_curved_rect"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/enter_mobile_number_"
+                android:imeActionLabel="Next"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="12"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingTop="@dimen/_9sdp"
+                android:paddingBottom="@dimen/_9sdp"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/color_black_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start|center"
+                android:text="@string/email_address_"
+                android:visibility="gone"
+                android:textColor="@color/color_black_light"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:background="@drawable/white_filled_curved_rect"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:gravity="center_vertical"
+                android:hint="@string/enter_email_address_"
+                android:imeActionLabel="Next"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingTop="@dimen/_9sdp"
+                android:paddingBottom="@dimen/_9sdp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/color_black_light" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_8sdp">
+
+            <TextView
+                android:id="@+id/tv_same_house_hold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start|center"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toStartOf="@+id/cb_same_house_hold"
+                android:text="@string/same_house_hold"
+                android:textColor="@color/color_black_light"
+                android:textSize="@dimen/_12sdp" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_same_house_hold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:buttonTint="@color/app_header_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:maxLines="1"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/_11sdp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</layout>
+
+    <!--    Hint on border
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etl_name"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/please_enter_name"
+                app:hintAnimationEnabled="true"
+                android:textColorHint="@color/hint_grey"
+                app:boxStrokeColor="@color/app_header_color"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:maxLines="1"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/_11sdp"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>-->
