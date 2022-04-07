@@ -717,7 +717,7 @@ public class DialogUtils {
         }
 
 
-        scratch_view_before.setText(R.string.lorium_ipsum_short);
+        scratch_view_before.setText("Scratch here");
 
 
         if (scratch_view_before != null) {
@@ -737,7 +737,7 @@ public class DialogUtils {
                 @Override
                 public void onRevealPercentChangedListener(ScratchTextView stv, float percent) {
                     // on percent reveal.
-                    HelperClass.toast(context, "You scratched " + percent + " %");
+                  //  HelperClass.toast(context, "You scratched " + percent + " %");
                 }
             });
         }
@@ -792,7 +792,7 @@ public class DialogUtils {
             @Override
             public void onRevealPercentChangedListener(ScratchRelativeLayoutView siv, float percent) {
                 // on percent change
-                HelperClass.toast(context, "You scratched " + percent + " %");
+              //  HelperClass.toast(context, "You scratched " + percent + " %");
             }
         });
 

@@ -44,18 +44,23 @@ public class LoyaltyAdapter extends RecyclerView.Adapter<LoyaltyAdapter.ViewReso
         if (position == 0) {
             holder.binding.tvEarnType.setText("Purchases");
             holder.binding.tvEarnType.setBackgroundResource(R.color.app_color);
+            holder.binding.percentage.setDonut_progress("95");
 
         } else if (position == 1) {
             holder.binding.tvEarnType.setText("Check-ins");
             holder.binding.tvEarnType.setBackgroundResource(R.color.app_color_2);
+            holder.binding.percentage.setDonut_progress("45");
         } else if (position == 2) {
             holder.binding.tvEarnType.setText("Feedback");
             holder.binding.tvEarnType.setBackgroundResource(R.color.light_green);
+            holder.binding.percentage.setProgress(0.5f);
         } else if (position == 3) {
             holder.binding.tvEarnType.setText("social Medial");
             holder.binding.tvEarnType.setBackgroundResource(R.color.color_chocolate);
+            holder.binding.percentage.setDonut_progress("65");
         } else if (position == 4) {
             holder.binding.tvEarnType.setText("Invite Friends");
+            holder.binding.percentage.setDonut_progress("55");
             holder.binding.tvEarnType.setBackgroundResource(R.color.colorAccent);
         } else holder.binding.tvEarnType.setText(loyaltyBeans.get(position).getVenue_name());
         holder.binding.tvPointsCount.setText("" + loyaltyBeans.get(position).getLoyalty_point() + " PTS");
