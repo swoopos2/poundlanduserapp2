@@ -57,7 +57,6 @@ public class HomeTopVenueAdapter extends RecyclerView.Adapter<HomeTopVenueAdapte
             holder.binding.tvVenueName.setText("Poundland Bilston");
         } else if (position == 1) {
             holder.binding.tvVenueName.setText(data.get(position).getVenue_name());
-            holder.binding.tvVenueName.setText("Poundland Willenhall");
         } /*else if (position == 2) {
             holder.binding.tvVenueName.setText("Poundland Willenhall");
         } else if (position == 3) {

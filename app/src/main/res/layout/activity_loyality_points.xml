@@ -219,7 +219,7 @@
                             android:fontFamily="@font/montserrat_light"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Get 100 Loyalty Points whenever your friend sign up using your code"
+                            android:text="@string/get_100_poundland_points_whenever_your_friend_sign_up_using_your_code"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             android:textColor="@color/black5C5757" />
 
@@ -228,6 +228,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
+                    android:id="@+id/tv_recent_action"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -240,6 +241,7 @@
                    />
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_recent_action"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -292,6 +294,7 @@
                                 android:fontFamily="@font/montserrat_regular"
                                 android:hint="@string/recent_order_amount"
                                 android:paddingLeft="@dimen/_5sdp"
+                                android:visibility="invisible"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                                 android:textColor="@color/hint_grey" />
                         </LinearLayout>

@@ -20,6 +20,7 @@ import com.poundland.retail.adapter.WishlistProductAdapter;
 import com.poundland.retail.adapter.WishlistVenueAdapter;
 import com.poundland.retail.apiUtils.ApiClient;
 import com.poundland.retail.apiUtils.ApiInterface;
+import com.poundland.retail.appUtils.HelperClass;
 import com.poundland.retail.model.responseModel.GetTotalCartResponseModel;
 import com.poundland.retail.appUtils.PrefManager;
 import com.poundland.retail.appUtils.WrapContentLinearLayoutManager;
@@ -41,6 +42,7 @@ import retrofit2.Response;
 
 import static com.poundland.retail.appUtils.HelperClass.isInternetOn;
 import static com.poundland.retail.appUtils.HelperClass.logOut;
+import static com.poundland.retail.appUtils.HelperClass.poundLandProduct;
 import static com.poundland.retail.appUtils.HelperClass.showSnackBar;
 import static com.poundland.retail.interfaces.Constants.AUTH_TOKEN;
 import static com.poundland.retail.interfaces.Constants.BARCODE_ID;
@@ -125,6 +127,8 @@ public class WishListActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void setProductAdapter() {
+
+
         final LinearLayoutManager layoutManager = new WrapContentLinearLayoutManager(instance, LinearLayoutManager.VERTICAL, false);
         wishlistProductAdapter = new WishlistProductAdapter(this, productWishListBean, this);
         binding.rvWishlist.setLayoutManager(layoutManager);
@@ -205,7 +209,13 @@ public class WishListActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void getWishListProduct(final boolean isMore) {
-        if (isInternetOn(this)) {
+        binding.swipeRefresh.setRefreshing(false);
+        GetWishListResponseModel  responseModel = new Gson().fromJson(poundLandProduct,GetWishListResponseModel.class);
+        productWishListBean.clear();
+        productWishListBean.addAll(responseModel.getLikes().getData());
+        setProductAdapter();
+
+        /*if (isInternetOn(this)) {
             final KProgressHUD dialog = DialogUtils.getCustomDialog(this);
             if (dialog != null && !isMore)
                 dialog.show();
@@ -284,7 +294,7 @@ public class WishListActivity extends BaseActivity implements View.OnClickListen
             binding.swipeRefresh.setRefreshing(false);
             showSnackBar(binding.getRoot(), getString(R.string.no_internet_available_msg));
 
-        }
+        }*/
     }
 
     private void getWishListVenue(final boolean isMore) {
@@ -409,20 +419,20 @@ public class WishListActivity extends BaseActivity implements View.OnClickListen
                     wish.putExtra(PRODUCT_ID, String.valueOf(productWishListBean.get(position).getProduct_id()));
                     startActivity(wish);
                 } else {
-                    if (productWishListBean.get(position).getProduct_type() == 1) {
+                   /* if (productWishListBean.get(position).getProduct_type() == 1) {
                         Intent product = new Intent(this, ProductDetailActivity.class);
                         product.putExtra(STORE_ID, productWishListBean.get(position).getVenue_id());
                         product.putExtra(PRODUCT_ID, String.valueOf(productWishListBean.get(position).getProduct_id()));
                         product.putExtra(OFFER_ID, String.valueOf(productWishListBean.get(position).getOffer_id()));
                         product.putExtra(BARCODE_ID, "");
                         startActivity(product);
-                    } else if (productWishListBean.get(position).getProduct_type() == 2) {
+                    } else if (productWishListBean.get(position).getProduct_type() == 2) {*/
                         Intent topStore = new Intent(instance, VenueDetailActivity.class);
                         topStore.putExtra(STORE_ID, productWishListBean.get(position).getVenue_id());
                         topStore.putExtra(FROM_WHERE, HOME_HOSPITALITY);
                         topStore.putExtra(CATEGORY_ID, "");
                         startActivity(topStore);
-                    }
+                  //  }
                 }
             }
         }

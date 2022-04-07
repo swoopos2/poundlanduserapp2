@@ -157,7 +157,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                 if (task.isSuccessful()) {
                     refreshedToken = task.getResult();
-                    Log.e("refreshedToken : >>> ",refreshedToken);
+                    Log.e("refreshedToken : >>> ", refreshedToken);
                 }
             }
         });
@@ -302,7 +302,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 // LoginManager.getInstance().//(Arrays.asList("public_profile, email, user_birthday"));
                 // List<String> permissionNeeds = Arrays.asList("user_photos", "email", "user_birthday", "user_friends", "public_profile");
                 // LoginManager.getInstance().logInWithReadPermissions(this, permissionNeeds);
-              //  binding.fbLoginButton.performClick();
+                //  binding.fbLoginButton.performClick();
                 break;
 
             case R.id.iv_email:
@@ -340,7 +340,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             binding.etUserId.requestFocus();
             showSnackBar(binding.getRoot(), getString(R.string.please_enter_a_valid_email));
             return false;
-        } */else if (binding.etPassword.getText().toString().trim().isEmpty()) {
+        } */ else if (binding.etPassword.getText().toString().trim().isEmpty()) {
             clearFocus();
             binding.etPassword.requestFocus();
             showSnackBar(binding.getRoot(), getString(R.string.please_enter_password));
@@ -364,8 +364,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             //final KProgressHUD dialog = DialogUtils.getCustomDialog(this);
             // if (dialog != null)
             //     dialog.show();
-            LoginRequestModel loginRequestModel = new LoginRequestModel("aryanm22897@gmail.com"/*binding.etUserId.getText().toString()*/,
-                    "Arya@#567"/*binding.etPassword.getText().toString()*/, refreshedToken,DEVICE_TYPE);
+            LoginRequestModel loginRequestModel;
+            if (true) {
+                loginRequestModel = new LoginRequestModel("aryanm22897@gmail.com"/*binding.etUserId.getText().toString()*/,
+                        "Arya@#567"/*binding.etPassword.getText().toString()*/, refreshedToken, DEVICE_TYPE);
+            } else {
+                loginRequestModel = new LoginRequestModel("noah89816@gmail.com"/*binding.etUserId.getText().toString()*/,
+                        "Arya@#567"/*binding.etPassword.getText().toString()*/, refreshedToken, DEVICE_TYPE);
+            }
 
 
             ApiInterface apiInterface = ApiClient.getClient().create(ApiInterface.class);

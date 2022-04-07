@@ -66,7 +66,32 @@ public class WishlistVenueAdapter extends RecyclerView.Adapter<WishlistVenueAdap
     @Override
     public void onBindViewHolder(@NonNull final WishlistVenueAdapter.ViewResource holder, int position) {
 
-        holder.binding.tvVenueName.setText(data.get(position).getVenue().getVenue_name());
+       /* if (position == 0) {
+            holder.binding.tvVenueName.setText("Poundland Bilston");
+            Glide.with(mContext).load(ApiRequestUrl.BASE_URL_VENUE + "20220406130602-42XDPSMK4FF73KW2SURNKUCBJE.jpeg").apply(new RequestOptions()
+                    .placeholder(R.drawable.ic_app_icon))
+                    .into(holder.binding.ivVenueImage);
+        } else if (position == 1) {
+            holder.binding.tvVenueName.setText("Poundland Wednesbury");
+            Glide.with(mContext).load(ApiRequestUrl.BASE_URL_VENUE + "20220406130937-shutterstock_1602429757-800x418.jpeg").apply(new RequestOptions()
+                    .placeholder(R.drawable.ic_app_icon))
+                    .into(holder.binding.ivVenueImage);
+        } else if (position == 2) {
+            holder.binding.tvVenueName.setText("Poundland Willenhall");
+            Glide.with(mContext).load(ApiRequestUrl.BASE_URL_VENUE + "20220406130822-42XDPSMK4FF73KW2SURNKUCBJE.jpeg").apply(new RequestOptions()
+                    .placeholder(R.drawable.ic_app_icon))
+                    .into(holder.binding.ivVenueImage);
+        } else if (position == 3) {
+
+        } else if (position == 4) {
+
+        } else {*/
+            holder.binding.tvVenueName.setText(data.get(position).getVenue().getVenue_name());
+            Glide.with(mContext).load(ApiRequestUrl.BASE_URL_VENUE + data.get(position).getVenue().getVenue_images()).apply(new RequestOptions()
+                    .placeholder(R.drawable.ic_app_icon))
+                    .into(holder.binding.ivVenueImage);
+
+
         if (data.get(position).getVenue().isIsWishlisted())
             holder.binding.ivFavo.setColorFilter(ContextCompat.getColor(mContext, R.color.color_light_red), android.graphics.PorterDuff.Mode.SRC_IN);
 
@@ -98,13 +123,6 @@ public class WishlistVenueAdapter extends RecyclerView.Adapter<WishlistVenueAdap
             e.getMessage();
         }
 
-       /* if (data.get(position).getVenue().getIsClose().equals("0")){
-            holder.binding.tvStatus.setText(mContext.getString(R.string.open));
-            holder.binding.ivStatus.setColorFilter(ContextCompat.getColor(mContext, R.color.drawer_tint_color), android.graphics.PorterDuff.Mode.SRC_IN);
-        }else {
-            holder.binding.tvStatus.setText(mContext.getString(R.string.close));
-            holder.binding.ivStatus.setColorFilter(ContextCompat.getColor(mContext, R.color.color_light_red), android.graphics.PorterDuff.Mode.SRC_IN);
-        }*/
         if (data.get(position).getVenue().getIsClose().equals("0")) {
             holder.binding.tvStatus.setText(mContext.getString(R.string.open_caps));
             holder.binding.tvStatus.setBackgroundResource(R.drawable.green_filled_rect);
@@ -114,10 +132,6 @@ public class WishlistVenueAdapter extends RecyclerView.Adapter<WishlistVenueAdap
             holder.binding.tvStatus.setBackgroundResource(R.drawable.app_colored_filled_rect_100);
             //  holder.binding.ivStatus.setColorFilter(ContextCompat.getColor(mContext, R.color.color_light_red), android.graphics.PorterDuff.Mode.SRC_IN);
         }
-
-        Glide.with(mContext).load(ApiRequestUrl.BASE_URL_VENUE + data.get(position).getVenue().getVenue_images()).apply(new RequestOptions()
-                .placeholder(R.drawable.ic_app_icon))
-                .into(holder.binding.ivVenueImage);
 
         holder.binding.cvMain.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -271,13 +271,6 @@ public class HomeFragment extends Fragment implements DrawerListner, View.OnClic
                 }
 
                 if (editable.length() > 2) {
-                    /*final Handler handler = new Handler();
-                    handler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                             fetchHeaderSearch(editable.toString());
-                        }
-                    }, 200);*/
 
                     fetchHeaderSearch(editable.toString());
                     Log.e("GGGGG", editable.toString());
@@ -321,8 +314,6 @@ public class HomeFragment extends Fragment implements DrawerListner, View.OnClic
 
         Log.e("from time:", startDate + " to time" + endDate);
         if (!location.equals("")) {
-            //location = location.replace("null", "");
-            //  binding.tvTopOffersNearYouLocation.setText(location);
             binding.tvCurrentLocation.setText(location);
             binding.tvCurrentLocationLabel.setText(context.getString(R.string.current_location_show));
         }
@@ -361,7 +352,6 @@ public class HomeFragment extends Fragment implements DrawerListner, View.OnClic
     }
 
     private void initLists() {
-        //  suggetionList = new ArrayList<>();
         topVenueList = new ArrayList<>();
         topHospitalityVenueList = new ArrayList<>();
         topOfferList = new ArrayList<>();

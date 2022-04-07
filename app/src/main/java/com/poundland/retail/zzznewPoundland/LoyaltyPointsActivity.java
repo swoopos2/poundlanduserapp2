@@ -17,7 +17,6 @@ import com.poundland.retail.appUtils.PrefManager;
 import com.poundland.retail.databinding.ActivityLoyalityPointsBinding;
 import com.poundland.retail.interfaces.Constants;
 import com.poundland.retail.zzznewPoundland.model.FetchCustomerRequest;
-import com.poundland.retail.zzznewPoundland.model.UpdateLoyaltyPointsRequest;
 import com.poundland.retail.zzznewPoundland.model.UpdateLoyaltyPointsResponse;
 import com.poundland.retail.zzznewPoundland.model.UserLoginResponseModel;
 
@@ -48,12 +47,18 @@ public class LoyaltyPointsActivity extends BaseActivity implements View.OnClickL
         if (bundle != null && bundle.containsKey(Constants.SHOW_RECENT_ACTIVITY)) {
             UpdateLoyaltyPointsResponse loyaltyPoints = bundle.getParcelable(Constants.SHOW_RECENT_ACTIVITY);
             if (loyaltyPoints.getEarn_loyalty_points() > 0) {
-                binding.recentEarnLoyaltyPoint.setText(getResources().getString(R.string.you_earn, HelperClass.decimalFormatReturnString(loyaltyPoints.getEarn_loyalty_points())));
+                binding.tvRecentAction.setVisibility(View.VISIBLE);
+                binding.cvRecentAction.setVisibility(View.VISIBLE);
+
+                binding.recentEarnLoyaltyPoint.setText(getResources().getString(R.string.you_earn_) + " " + loyaltyPoints.getEarn_loyalty_points());
+              //  binding.recentEarnLoyaltyPoint.setText(getResources().getString(R.string.you_earn, HelperClass.decimalFormatReturnString(loyaltyPoints.getEarn_loyalty_points())));
                 binding.earnLoyaltyPoint.setText("+" + HelperClass.decimalFormatReturnString(loyaltyPoints.getEarn_loyalty_points()));
                 binding.recentOrderAmount.setText(getResources().getString(R.string.recent_order_amount, HelperClass.decimalFormat(this, (float) loyaltyPoints.getEarn_loyalty_points())));
             }
         } else {
             binding.recentEarnLoyaltyPoint.setText("");
+            binding.tvRecentAction.setVisibility(View.GONE);
+            binding.cvRecentAction.setVisibility(View.GONE);
         }
     }
 

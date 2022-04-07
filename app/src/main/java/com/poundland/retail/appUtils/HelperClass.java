@@ -1438,9 +1438,7 @@ public class HelperClass {
     }
 
     public static double decimal2DigitFormat(double aDouble) {
-//        return new BigDecimal(aFloat).setScale(2, RoundingMode.UP).floatValue();
         return new BigDecimal(aDouble).setScale(2, BigDecimal.ROUND_HALF_DOWN).doubleValue();
-        //return Float.parseFloat(Constants._DECIMAL_FORMAT.format(aFloat));
     }
 
     public static String decimalFormat(Context context, Float aFloat) {
@@ -1466,4 +1464,404 @@ public class HelperClass {
     public static String decimalFormat(double aDouble) {
         return Constants.DECIMAL_FORMAT.format(aDouble);
     }
+
+    public static String poundLandProduct = "{\n" +
+            "  \"status\": true,\n" +
+            "  \"message\": \"List of Wishlist.\",\n" +
+            "  \"likes\": {\n" +
+            "    \"current_page\": 1,\n" +
+            "    \"data\": [\n" +
+            "      {\n" +
+            "        \"id\": 2132,\n" +
+            "        \"guest\": null,\n" +
+            "        \"customer_id\": \"142\",\n" +
+            "        \"product_id\": \"832\",\n" +
+            "        \"modifier_id\": \"887\",\n" +
+            "        \"offer_id\": null,\n" +
+            "        \"ip_address\": null,\n" +
+            "        \"venue_id\": \"2020071407361121\",\n" +
+            "        \"merchant_id\": \"15\",\n" +
+            "        \"created_at\": \"2021-04-25 16:02:47\",\n" +
+            "        \"updated_at\": \"2022-02-01 06:31:13\",\n" +
+            "        \"product_name\": \"Amayra Women's Cotton Straight Top(Blue)\",\n" +
+            "        \"product_type\": \"1\",\n" +
+            "        \"images\": \"uploaded\\/products\\/1134816174375080.jpeg\",\n" +
+            "        \"brand_id\": null,\n" +
+            "        \"modifier_name\": \"M,Pink\",\n" +
+            "        \"selling_price\": \"11.00\",\n" +
+            "        \"avl_quantity\": \"49931\",\n" +
+            "        \"modifier_images\": \"uploaded\\/products\\/8700715990269570.png\",\n" +
+            "        \"venue_name\": \"Go Amazon Retail\",\n" +
+            "        \"venue_type\": \"1\",\n" +
+            "        \"latitude\": \"52.586973\",\n" +
+            "        \"longitude\": \"-2.12882\",\n" +
+            "        \"address_1\": \"Wolverhampton, UK\",\n" +
+            "        \"delivery_distance\": \"0\",\n" +
+            "        \"distance\": \"4,088.65\",\n" +
+            "        \"offer_title\": \"\",\n" +
+            "        \"offer_type\": null,\n" +
+            "        \"discount_amount\": null,\n" +
+            "        \"discount_type\": null,\n" +
+            "        \"disc_detail_type\": null,\n" +
+            "        \"new_price\": \"11.00\",\n" +
+            "        \"brand_name\": \"\",\n" +
+            "        \"match_count\": 1,\n" +
+            "        \"min_price\": \"11.00\",\n" +
+            "        \"max_price\": \"11.00\"\n" +
+            "      },\n" +
+            "      {\n" +
+            "        \"id\": 2091,\n" +
+            "        \"guest\": null,\n" +
+            "        \"customer_id\": \"142\",\n" +
+            "        \"product_id\": \"809\",\n" +
+            "        \"modifier_id\": \"815\",\n" +
+            "        \"offer_id\": \"1\",\n" +
+            "        \"ip_address\": \"180.151.88.152\",\n" +
+            "        \"venue_id\": \"2020071407361121\",\n" +
+            "        \"merchant_id\": \"15\",\n" +
+            "        \"created_at\": \"2021-04-09 06:03:15\",\n" +
+            "        \"updated_at\": \"2021-04-09 06:03:15\",\n" +
+            "        \"product_name\": \"VERO MODA Women's Checkered Regular Fit Top\",\n" +
+            "        \"product_type\": \"1\",\n" +
+            "        \"images\": \"uploaded\\/products\\/3888116174366181.jpeg\",\n" +
+            "        \"brand_id\": \"24\",\n" +
+            "        \"modifier_name\": \"Prism violet,64GB\",\n" +
+            "        \"selling_price\": \"50.00\",\n" +
+            "        \"avl_quantity\": \"896\",\n" +
+            "        \"modifier_images\": \"uploaded\\/products\\/4498615983565820.png\",\n" +
+            "        \"venue_name\": \"Go Amazon Retail\",\n" +
+            "        \"venue_type\": \"1\",\n" +
+            "        \"latitude\": \"52.586973\",\n" +
+            "        \"longitude\": \"-2.12882\",\n" +
+            "        \"address_1\": \"Wolverhampton, UK\",\n" +
+            "        \"delivery_distance\": \"0\",\n" +
+            "        \"distance\": \"4,088.65\",\n" +
+            "        \"offer_title\": \"\",\n" +
+            "        \"offer_type\": null,\n" +
+            "        \"discount_amount\": \"10.00\",\n" +
+            "        \"discount_type\": \"1\",\n" +
+            "        \"disc_detail_type\": \"1\",\n" +
+            "        \"new_price\": \"45.00\",\n" +
+            "        \"brand_name\": \"Samsung\",\n" +
+            "        \"match_count\": 1,\n" +
+            "        \"min_price\": \"40.00\",\n" +
+            "        \"max_price\": \"40.00\"\n" +
+            "      },\n" +
+            "      {\n" +
+            "        \"id\": 2060,\n" +
+            "        \"guest\": null,\n" +
+            "        \"customer_id\": \"142\",\n" +
+            "        \"product_id\": \"2649\",\n" +
+            "        \"modifier_id\": \"3413\",\n" +
+            "        \"offer_id\": null,\n" +
+            "        \"ip_address\": \"180.151.77.251\",\n" +
+            "        \"venue_id\": \"2020071407361121\",\n" +
+            "        \"merchant_id\": \"15\",\n" +
+            "        \"created_at\": \"2021-04-07 12:23:57\",\n" +
+            "        \"updated_at\": \"2021-04-07 12:23:57\",\n" +
+            "        \"product_name\": \"MALLORY WINSTON Women's Top\",\n" +
+            "        \"product_type\": \"1\",\n" +
+            "        \"images\": \"uploaded\\/products\\/7179116174365200.jpeg\",\n" +
+            "        \"brand_id\": \"209\",\n" +
+            "        \"modifier_name\": null,\n" +
+            "        \"selling_price\": \"1.09\",\n" +
+            "        \"avl_quantity\": \"0\",\n" +
+            "        \"modifier_images\": \"uploaded\\/products\\/6343816153720167.jpeg\",\n" +
+            "        \"venue_name\": \"Go Amazon Retail\",\n" +
+            "        \"venue_type\": \"1\",\n" +
+            "        \"latitude\": \"52.586973\",\n" +
+            "        \"longitude\": \"-2.12882\",\n" +
+            "        \"address_1\": \"Wolverhampton, UK\",\n" +
+            "        \"delivery_distance\": \"0\",\n" +
+            "        \"distance\": \"4,088.65\",\n" +
+            "        \"offer_title\": \"\",\n" +
+            "        \"offer_type\": null,\n" +
+            "        \"discount_amount\": null,\n" +
+            "        \"discount_type\": null,\n" +
+            "        \"disc_detail_type\": null,\n" +
+            "        \"new_price\": \"1.09\",\n" +
+            "        \"brand_name\": \"Heinz\",\n" +
+            "        \"match_count\": 4,\n" +
+            "        \"min_price\": \"1.09\",\n" +
+            "        \"max_price\": \"1.09\"\n" +
+            "      },\n" +
+            "      {\n" +
+            "        \"id\": 2022,\n" +
+            "        \"guest\": null,\n" +
+            "        \"customer_id\": \"142\",\n" +
+            "        \"product_id\": \"2727\",\n" +
+            "        \"modifier_id\": \"3495\",\n" +
+            "        \"offer_id\": null,\n" +
+            "        \"ip_address\": \"180.151.90.141\",\n" +
+            "        \"venue_id\": \"2020071407361121\",\n" +
+            "        \"merchant_id\": \"21\",\n" +
+            "        \"created_at\": \"2021-04-06 07:26:14\",\n" +
+            "        \"updated_at\": \"2021-04-06 08:05:56\",\n" +
+            "        \"product_name\": \"Amayra Women's Cotton Straight Top(Blue)\",\n" +
+            "        \"product_type\": \"1\",\n" +
+            "        \"images\": \"uploaded\\/products\\/1134816174375080.jpeg\",\n" +
+            "        \"brand_id\": \"245\",\n" +
+            "        \"modifier_name\": null,\n" +
+            "        \"selling_price\": \"8.00\",\n" +
+            "        \"avl_quantity\": \"49993\",\n" +
+            "        \"modifier_images\": \"\",\n" +
+            "        \"venue_name\": \"Poundland Bilston\",\n" +
+            "        \"venue_type\": \"1\",\n" +
+            "        \"latitude\": \"51.5073509\",\n" +
+            "        \"longitude\": \"-0.1277583\",\n" +
+            "        \"address_1\": \"London, UK\",\n" +
+            "        \"delivery_distance\": \"0\",\n" +
+            "        \"distance\": \"4,056.80\",\n" +
+            "        \"offer_title\": \"\",\n" +
+            "        \"offer_type\": null,\n" +
+            "        \"discount_amount\": null,\n" +
+            "        \"discount_type\": null,\n" +
+            "        \"disc_detail_type\": null,\n" +
+            "        \"new_price\": \"8.00\",\n" +
+            "        \"brand_name\": \"Aero\",\n" +
+            "        \"match_count\": 1,\n" +
+            "        \"min_price\": \"8.00\",\n" +
+            "        \"max_price\": \"8.00\"\n" +
+            "      },\n" +
+            "      {\n" +
+            "        \"id\": 2021,\n" +
+            "        \"guest\": null,\n" +
+            "        \"customer_id\": \"142\",\n" +
+            "        \"product_id\": \"1303\",\n" +
+            "        \"modifier_id\": \"1798\",\n" +
+            "        \"offer_id\": null,\n" +
+            "        \"ip_address\": \"180.151.90.141\",\n" +
+            "        \"venue_id\": \"2020071407361121\",\n" +
+            "        \"merchant_id\": \"21\",\n" +
+            "        \"created_at\": \"2021-04-06 07:26:11\",\n" +
+            "        \"updated_at\": \"2021-04-06 08:06:13\",\n" +
+            "        \"product_name\": \"Women Blue Woven Design Float Ride Run 2.0 Running Shoes\",\n" +
+            "        \"product_type\": \"1\",\n" +
+            "        \"images\": \"uploaded\\/products\\/3815815978366430.png\",\n" +
+            "        \"brand_id\": \"26\",\n" +
+            "        \"modifier_name\": null,\n" +
+            "        \"selling_price\": \"12.00\",\n" +
+            "        \"avl_quantity\": \"49995\",\n" +
+            "        \"modifier_images\": \"\",\n" +
+            "        \"venue_name\": \"Poundland Bilston\",\n" +
+            "        \"venue_type\": \"1\",\n" +
+            "        \"latitude\": \"51.5073509\",\n" +
+            "        \"longitude\": \"-0.1277583\",\n" +
+            "        \"address_1\": \"London, UK\",\n" +
+            "        \"delivery_distance\": \"0\",\n" +
+            "        \"distance\": \"4,056.80\",\n" +
+            "        \"offer_title\": \"\",\n" +
+            "        \"offer_type\": null,\n" +
+            "        \"discount_amount\": null,\n" +
+            "        \"discount_type\": null,\n" +
+            "        \"disc_detail_type\": null,\n" +
+            "        \"new_price\": \"12.00\",\n" +
+            "        \"brand_name\": \"Black Mountain\",\n" +
+            "        \"match_count\": 1,\n" +
+            "        \"min_price\": \"12.00\",\n" +
+            "        \"max_price\": \"12.00\"\n" +
+            "      },\n" +
+            "      {\n" +
+            "        \"id\": 2020,\n" +
+            "        \"guest\": null,\n" +
+            "        \"customer_id\": \"142\",\n" +
+            "        \"product_id\": \"1302\",\n" +
+            "        \"modifier_id\": \"1797\",\n" +
+            "        \"offer_id\": null,\n" +
+            "        \"ip_address\": \"180.151.90.141\",\n" +
+            "        \"venue_id\": \"2020071407361121\",\n" +
+            "        \"merchant_id\": \"21\",\n" +
+            "        \"created_at\": \"2021-04-06 07:26:07\",\n" +
+            "        \"updated_at\": \"2021-04-06 08:05:04\",\n" +
+            "        \"product_name\": \"Budweiser Streetwear Co\",\n" +
+            "        \"product_type\": \"1\",\n" +
+            "        \"images\": \"uploaded\\/products\\/2807816034567470.jpeg\",\n" +
+            "        \"brand_id\": \"7\",\n" +
+            "        \"modifier_name\": null,\n" +
+            "        \"selling_price\": \"10.00\",\n" +
+            "        \"avl_quantity\": \"49993\",\n" +
+            "        \"modifier_images\": \"\",\n" +
+            "        \"venue_name\": \"Poundland Bilston\",\n" +
+            "        \"venue_type\": \"1\",\n" +
+            "        \"latitude\": \"51.5073509\",\n" +
+            "        \"longitude\": \"-0.1277583\",\n" +
+            "        \"address_1\": \"London, UK\",\n" +
+            "        \"delivery_distance\": \"0\",\n" +
+            "        \"distance\": \"4,056.80\",\n" +
+            "        \"offer_title\": \"\",\n" +
+            "        \"offer_type\": null,\n" +
+            "        \"discount_amount\": null,\n" +
+            "        \"discount_type\": null,\n" +
+            "        \"disc_detail_type\": null,\n" +
+            "        \"new_price\": \"10.00\",\n" +
+            "        \"brand_name\": \"Fila\",\n" +
+            "        \"match_count\": 1,\n" +
+            "        \"min_price\": \"10.00\",\n" +
+            "        \"max_price\": \"10.00\"\n" +
+            "      },\n" +
+            "      {\n" +
+            "        \"id\": 1697,\n" +
+            "        \"guest\": null,\n" +
+            "        \"customer_id\": \"142\",\n" +
+            "        \"product_id\": \"887\",\n" +
+            "        \"modifier_id\": \"1046\",\n" +
+            "        \"offer_id\": null,\n" +
+            "        \"ip_address\": null,\n" +
+            "        \"venue_id\": \"2020071407361121\",\n" +
+            "        \"merchant_id\": \"15\",\n" +
+            "        \"created_at\": \"2021-02-17 09:35:38\",\n" +
+            "        \"updated_at\": \"2022-04-06 10:44:40\",\n" +
+            "        \"product_name\": \"Women Black Solid Rapid-Dry Training Tights\",\n" +
+            "        \"product_type\": \"1\",\n" +
+            "        \"images\": \"uploaded\\/products\\/4878115978363290.png\",\n" +
+            "        \"brand_id\": \"42\",\n" +
+            "        \"modifier_name\": null,\n" +
+            "        \"selling_price\": \"19.00\",\n" +
+            "        \"avl_quantity\": \"990\",\n" +
+            "        \"modifier_images\": \"uploaded\\/products\\/4878115978363290.png\",\n" +
+            "        \"venue_name\": \"Go Amazon Retail\",\n" +
+            "        \"venue_type\": \"1\",\n" +
+            "        \"latitude\": \"52.586973\",\n" +
+            "        \"longitude\": \"-2.12882\",\n" +
+            "        \"address_1\": \"Wolverhampton, UK\",\n" +
+            "        \"delivery_distance\": \"0\",\n" +
+            "        \"distance\": \"4,088.65\",\n" +
+            "        \"offer_title\": \"\",\n" +
+            "        \"offer_type\": null,\n" +
+            "        \"discount_amount\": null,\n" +
+            "        \"discount_type\": null,\n" +
+            "        \"disc_detail_type\": null,\n" +
+            "        \"new_price\": \"19.00\",\n" +
+            "        \"brand_name\": \"Puma\",\n" +
+            "        \"match_count\": 1,\n" +
+            "        \"min_price\": \"19.00\",\n" +
+            "        \"max_price\": \"19.00\"\n" +
+            "      },\n" +
+            "      {\n" +
+            "        \"id\": 1690,\n" +
+            "        \"guest\": null,\n" +
+            "        \"customer_id\": \"142\",\n" +
+            "        \"product_id\": \"834\",\n" +
+            "        \"modifier_id\": \"902\",\n" +
+            "        \"offer_id\": \"186\",\n" +
+            "        \"ip_address\": \"203.122.0.207\",\n" +
+            "        \"venue_id\": \"2020071407361121\",\n" +
+            "        \"merchant_id\": \"15\",\n" +
+            "        \"created_at\": \"2021-02-15 13:22:59\",\n" +
+            "        \"updated_at\": \"2021-02-15 13:22:59\",\n" +
+            "        \"product_name\": \"Women Navy Solid 3\\/4th Length Yoga Track Pants\",\n" +
+            "        \"product_type\": \"1\",\n" +
+            "        \"images\": \"uploaded\\/products\\/3090615978361680.png\",\n" +
+            "        \"brand_id\": \"24\",\n" +
+            "        \"modifier_name\": null,\n" +
+            "        \"selling_price\": \"50.00\",\n" +
+            "        \"avl_quantity\": \"1\",\n" +
+            "        \"modifier_images\": \"uploaded\\/products\\/3090615978361680.png\",\n" +
+            "        \"venue_name\": \"Go Amazon Retail\",\n" +
+            "        \"venue_type\": \"1\",\n" +
+            "        \"latitude\": \"52.586973\",\n" +
+            "        \"longitude\": \"-2.12882\",\n" +
+            "        \"address_1\": \"Wolverhampton, UK\",\n" +
+            "        \"delivery_distance\": \"0\",\n" +
+            "        \"distance\": \"4,088.65\",\n" +
+            "        \"offer_title\": \"\",\n" +
+            "        \"offer_type\": null,\n" +
+            "        \"discount_amount\": \"25.00\",\n" +
+            "        \"discount_type\": \"1\",\n" +
+            "        \"disc_detail_type\": \"1\",\n" +
+            "        \"new_price\": \"37.50\",\n" +
+            "        \"brand_name\": \"Samsung\",\n" +
+            "        \"match_count\": 1,\n" +
+            "        \"min_price\": \"50.00\",\n" +
+            "        \"max_price\": \"50.00\"\n" +
+            "      },\n" +
+            "      {\n" +
+            "        \"id\": 1687,\n" +
+            "        \"guest\": null,\n" +
+            "        \"customer_id\": \"142\",\n" +
+            "        \"product_id\": \"2413\",\n" +
+            "        \"modifier_id\": \"3127\",\n" +
+            "        \"offer_id\": null,\n" +
+            "        \"ip_address\": \"203.122.0.207\",\n" +
+            "        \"venue_id\": \"2020071407361121\",\n" +
+            "        \"merchant_id\": \"5\",\n" +
+            "        \"created_at\": \"2021-02-15 11:09:21\",\n" +
+            "        \"updated_at\": \"2021-02-15 11:09:21\",\n" +
+            "        \"product_name\": \"Women Black Solid Cropped Jersey Strappy Top\",\n" +
+            "        \"product_type\": \"2\",\n" +
+            "        \"images\": \"uploaded\\/products\\/3856415979216540.png\",\n" +
+            "        \"brand_id\": \"177\",\n" +
+            "        \"modifier_name\": \"\",\n" +
+            "        \"selling_price\": \"3.99\",\n" +
+            "        \"avl_quantity\": \"50000\",\n" +
+            "        \"modifier_images\": \"uploaded\\/products\\/3856415979216540.png\",\n" +
+            "        \"venue_name\": \"Vik Grocery\",\n" +
+            "        \"venue_type\": \"2\",\n" +
+            "        \"latitude\": \"52.5756465\",\n" +
+            "        \"longitude\": \"-2.138598\",\n" +
+            "        \"address_1\": \"Oaklands Road, Wolverhampton WV3 0DS, UK\",\n" +
+            "        \"delivery_distance\": \"0\",\n" +
+            "        \"distance\": \"4,089.48\",\n" +
+            "        \"offer_title\": \"\",\n" +
+            "        \"offer_type\": null,\n" +
+            "        \"discount_amount\": null,\n" +
+            "        \"discount_type\": null,\n" +
+            "        \"disc_detail_type\": null,\n" +
+            "        \"new_price\": \"3.99\",\n" +
+            "        \"brand_name\": \"AFRICAN PRIDE\",\n" +
+            "        \"match_count\": 1,\n" +
+            "        \"min_price\": \"3.99\",\n" +
+            "        \"max_price\": \"3.99\"\n" +
+            "      },\n" +
+            "      {\n" +
+            "        \"id\": 1683,\n" +
+            "        \"guest\": null,\n" +
+            "        \"customer_id\": \"142\",\n" +
+            "        \"pr 2022-04-07 13:55:21.406 11450-13141/com.poundland.retail D/OkHttp: oduct_id\": \"2089\",\n" +
+            "        \"modifier_id\": \"2707\",\n" +
+            "        \"offer_id\": null,\n" +
+            "        \"ip_address\": null,\n" +
+            "        \"venue_id\": \"2020071407361121\",\n" +
+            "        \"merchant_id\": \"15\",\n" +
+            "        \"created_at\": \"2021-02-15 08:39:20\",\n" +
+            "        \"updated_at\": \"2021-02-15 08:39:20\",\n" +
+            "        \"product_name\": \"Unisex White & Green DMX Trail Shadow Colourblocked Running Shoes\",\n" +
+            "        \"product_type\": \"1\",\n" +
+            "        \"images\": \"uploaded\\/products\\/2463115995701610.png\",\n" +
+            "        \"brand_id\": \"5\",\n" +
+            "        \"modifier_name\": null,\n" +
+            "        \"selling_price\": \"12.00\",\n" +
+            "        \"avl_quantity\": \"50000\",\n" +
+            "        \"modifier_images\": \"uploaded\\/products\\/2463115995701610.png\",\n" +
+            "        \"venue_name\": \"Next\",\n" +
+            "        \"venue_type\": \"1\",\n" +
+            "        \"latitude\": \"52.5875483\",\n" +
+            "        \"longitude\": \"-2.120122100000001\",\n" +
+            "        \"address_1\": \"Wolverhampton, Railway Drive, West Midlands, Wolverhampton, UK\",\n" +
+            "        \"delivery_distance\": \"10000\",\n" +
+            "        \"distance\": \"4,088.31\",\n" +
+            "        \"offer_title\": \"\",\n" +
+            "        \"offer_type\": null,\n" +
+            "        \"discount_amount\": null,\n" +
+            "        \"discount_type\": null,\n" +
+            "        \"disc_detail_type\": null,\n" +
+            "        \"new_price\": \"12.00\",\n" +
+            "        \"brand_name\": \"Adidas\",\n" +
+            "        \"match_count\": 1,\n" +
+            "        \"min_price\": \"12.00\",\n" +
+            "        \"max_price\": \"12.00\"\n" +
+            "      }\n" +
+            "    ],\n" +
+            "    \"first_page_url\": \"https:\\/\\/swoopelocaltesting.com\\/admin\\/public\\/api\\/swoopelocalapp\\/getWishlists?page=1\",\n" +
+            "    \"from\": 1,\n" +
+            "    \"last_page\": 12,\n" +
+            "    \"last_page_url\": \"https:\\/\\/swoopelocaltesting.com\\/admin\\/public\\/api\\/swoopelocalapp\\/getWishlists?page=12\",\n" +
+            "    \"next_page_url\": \"https:\\/\\/swoopelocaltesting.com\\/admin\\/public\\/api\\/swoopelocalapp\\/getWishlists?page=2\",\n" +
+            "    \"path\": \"https:\\/\\/swoopelocaltesting.com\\/admin\\/public\\/api\\/swoopelocalapp\\/getWishlists\",\n" +
+            "    \"per_page\": 10,\n" +
+            "    \"prev_page_url\": null,\n" +
+            "    \"to\": 10,\n" +
+            "    \"total\": 118\n" +
+            "  }\n" +
+            "}";
 }
