@@ -50,7 +50,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_below="@+id/venue_img"
+            android:layout_below="@+id/iv_product_image_img"
             android:layout_marginTop="5dp"
             android:background="@color/divider" />
 

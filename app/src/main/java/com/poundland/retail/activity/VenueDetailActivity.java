@@ -1096,7 +1096,7 @@ public class VenueDetailActivity extends BaseActivity implements View.OnClickLis
 
         if (data.getVenue_details().getVenue_images() != null && data.getVenue_details().getVenue_images().size() > 0) {
             imageList.clear();
-          //  imageList.addAll(data.getVenue_details().getVenue_images());
+            imageList.addAll(data.getVenue_details().getVenue_images());
             setViewPager();
         }
     }

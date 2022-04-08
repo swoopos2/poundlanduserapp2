@@ -1320,110 +1320,40 @@ public class HelperClass {
             "  \"categories\": [\n" +
             "    {\n" +
             "      \"id\": 26,\n" +
-            "      \"cat_name\": \"The Spot\",\n" +
+            "      \"cat_name\": \"Poundland Bilston\",\n" +
             "      \"parent_cat_id\": \"24\",\n" +
-            "      \"image\": \"Electroincs07012021072630.png\",\n" +
+            "      \"image\": \"20220406130602-42XDPSMK4FF73KW2SURNKUCBJE.jpeg\",\n" +
             "      \"color\": \"e66465\",\n" +
             "      \"menu_level\": \"5\"\n" +
             "    },\n" +
             "    {\n" +
             "      \"id\": 17,\n" +
-            "      \"cat_name\": \"The Carters\",\n" +
+            "      \"cat_name\": \"Poundshop New\",\n" +
             "      \"parent_cat_id\": \"0\",\n" +
-            "      \"image\": \"Chocolates07012021071325.png\",\n" +
+            "      \"image\": \"    \",\n" +
             "      \"color\": \"e66465\",\n" +
             "      \"menu_level\": \"5\"\n" +
             "    },\n" +
             "    {\n" +
             "      \"id\": 9,\n" +
-            "      \"cat_name\": \"Parle Cafe\",\n" +
+            "      \"cat_name\": \"Poundland Wednesbury\",\n" +
             "      \"parent_cat_id\": \"0\",\n" +
-            "      \"image\": \"Clothing18082020054001.png\",\n" +
+            "      \"image\": \"20220406130937-shutterstock_1602429757-800x418.jpeg\",\n" +
             "      \"color\": \"e66465\",\n" +
             "      \"menu_level\": \"3\"\n" +
             "    },\n" +
             "    {\n" +
             "      \"id\": 11,\n" +
-            "      \"cat_name\": \"Sweeggy\",\n" +
+            "      \"cat_name\": \"Poundland Willenhall\",\n" +
             "      \"parent_cat_id\": \"0\",\n" +
-            "      \"image\": \"Electroincs07012021072630.png\",\n" +
+            "      \"image\": \"20220406130822-42XDPSMK4FF73KW2SURNKUCBJE.jpeg\",\n" +
             "      \"color\": \"64ade6\",\n" +
             "      \"menu_level\": \"4\"\n" +
-            "    },\n" +
-            "    {\n" +
-            "      \"id\": 15,\n" +
-            "      \"cat_name\": \"Womato\",\n" +
-            "      \"parent_cat_id\": \"0\",\n" +
-            "      \"image\": \"Fashion18082020053744.png\",\n" +
-            "      \"color\": \"b13132\",\n" +
-            "      \"menu_level\": \"3\"\n" +
-            "    },\n" +
-            "    {\n" +
-            "      \"id\": 22,\n" +
-            "      \"cat_name\": \"Raj Darbar\",\n" +
-            "      \"parent_cat_id\": \"18\",\n" +
-            "      \"image\": \"Floor Cleaning29102020043432.png\",\n" +
-            "      \"color\": \"e66465\",\n" +
-            "      \"menu_level\": \"2\"\n" +
             "    }\n" +
             "  ]\n" +
             "}";
 
 
-    public static String product_content = "{\n" +
-            "  \"status\": true,\n" +
-            "  \"message\": \"List Of Category\",\n" +
-            "  \"categories\": [\n" +
-            "    {\n" +
-            "      \"id\": 26,\n" +
-            "      \"cat_name\": \"Women Navy Blue Top\",\n" +
-            "      \"parent_cat_id\": \"24\",\n" +
-            "      \"image\": \"uploaded/products/8700715990269570.png\",\n" +
-            "      \"color\": \"e66465\",\n" +
-            "      \"menu_level\": \"5\"\n" +
-            "    },\n" +
-            "    {\n" +
-            "      \"id\": 17,\n" +
-            "      \"cat_name\": \"Pink Printed Sports Cloth\",\n" +
-            "      \"parent_cat_id\": \"0\",\n" +
-            "      \"image\": \"uploaded/products/8416416268447620.png\",\n" +
-            "      \"color\": \"e66465\",\n" +
-            "      \"menu_level\": \"5\"\n" +
-            "    },\n" +
-            "    {\n" +
-            "      \"id\": 9,\n" +
-            "      \"cat_name\": \"Gown\",\n" +
-            "      \"parent_cat_id\": \"0\",\n" +
-            "      \"image\": \"uploaded/products/7808616268704150.png\",\n" +
-            "      \"color\": \"e66465\",\n" +
-            "      \"menu_level\": \"3\"\n" +
-            "    },\n" +
-            "    {\n" +
-            "      \"id\": 11,\n" +
-            "      \"cat_name\": \"Men Black Zone Shoe\",\n" +
-            "      \"parent_cat_id\": \"0\",\n" +
-            "      \"image\": \"uploaded/products/9901515990285140.png\",\n" +
-            "      \"color\": \"64ade6\",\n" +
-            "      \"menu_level\": \"4\"\n" +
-            "    },\n" +
-            "    {\n" +
-            "      \"id\": 1,\n" +
-            "      \"cat_name\": \"Men Black Zone XT Shoe\",\n" +
-            "      \"parent_cat_id\": \"0\",\n" +
-            "      \"image\": \"uploaded/products/7413015990284840.png\",\n" +
-            "      \"color\": \"b13132\",\n" +
-            "      \"menu_level\": \"3\"\n" +
-            "    },\n" +
-            "    {\n" +
-            "      \"id\": 22,\n" +
-            "      \"cat_name\": \"Women White Solid Top\",\n" +
-            "      \"parent_cat_id\": \"18\",\n" +
-            "      \"image\": \"uploaded/products/4539716014503780.png\",\n" +
-            "      \"color\": \"e66465\",\n" +
-            "      \"menu_level\": \"2\"\n" +
-            "    }\n" +
-            "  ]\n" +
-            "}";
 
 
     public static String decimalFormatReturnString(Double aFloat) {
@@ -1464,6 +1394,63 @@ public class HelperClass {
     public static String decimalFormat(double aDouble) {
         return Constants.DECIMAL_FORMAT.format(aDouble);
     }
+
+
+    public static String product_content = "{\n" +
+            "  \"status\": true,\n" +
+            "  \"message\": \"List Of Category\",\n" +
+            "  \"categories\": [\n" +
+            "    {\n" +
+            "      \"id\": 26,\n" +
+            "      \"cat_name\": \"Amayra Women's Cotton Straight Top(Blue)\",\n" +
+            "      \"parent_cat_id\": \"24\",\n" +
+            "      \"image\": \"uploaded\\/products\\/1134816174375080.jpeg\",\n" +
+            "      \"color\": \"e66465\",\n" +
+            "      \"menu_level\": \"5\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"id\": 17,\n" +
+            "      \"cat_name\": \"VERO MODA Women's Checkered Regular Fit Top\",\n" +
+            "      \"parent_cat_id\": \"0\",\n" +
+            "      \"image\": \"uploaded\\/products\\/3888116174366181.jpeg\",\n" +
+            "      \"color\": \"e66465\",\n" +
+            "      \"menu_level\": \"5\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"id\": 9,\n" +
+            "      \"cat_name\": \"MALLORY WINSTON Women's Top\",\n" +
+            "      \"parent_cat_id\": \"0\",\n" +
+            "      \"image\": \"uploaded\\/products\\/7179116174365200.jpeg\",\n" +
+            "      \"color\": \"e66465\",\n" +
+            "      \"menu_level\": \"3\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"id\": 11,\n" +
+            "      \"cat_name\": \"Amayra Women's Cotton Straight Top(Blue)\",\n" +
+            "      \"parent_cat_id\": \"0\",\n" +
+            "      \"image\": \"uploaded\\/products\\/1134816174375080.jpeg\",\n" +
+            "      \"color\": \"64ade6\",\n" +
+            "      \"menu_level\": \"4\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"id\": 1,\n" +
+            "      \"cat_name\": \"Women Blue Woven Design Float Ride Run 2.0 Running Shoes\",\n" +
+            "      \"parent_cat_id\": \"0\",\n" +
+            "      \"image\": \"uploaded\\/products\\/3815815978366430.png\",\n" +
+            "      \"color\": \"b13132\",\n" +
+            "      \"menu_level\": \"3\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"id\": 22,\n" +
+            "      \"cat_name\": \"Budweiser Streetwear Co\",\n" +
+            "      \"parent_cat_id\": \"18\",\n" +
+            "      \"image\": \"uploaded\\/products\\/2807816034567470.jpeg\",\n" +
+            "      \"color\": \"e66465\",\n" +
+            "      \"menu_level\": \"2\"\n" +
+            "    }\n" +
+            "  ]\n" +
+            "}";
+
 
     public static String poundLandProduct = "{\n" +
             "  \"status\": true,\n" +

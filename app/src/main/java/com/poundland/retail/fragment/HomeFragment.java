@@ -751,7 +751,7 @@ public class HomeFragment extends Fragment implements DrawerListner, View.OnClic
                                 @Override
                                 public void onPositiveClick() {
                                     if (httpCode == 401) {
-                                        logOut(getActivity());
+                                     //   logOut(getActivity());
                                     }
                                 }
 

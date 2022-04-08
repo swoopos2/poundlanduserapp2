@@ -43,8 +43,8 @@ public class TutorialFourFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_tutorial_four, container, false);
 
-                Glide.with(this).load(R.drawable.ic_tutorial_loalty4x)
-                .apply(new RequestOptions().placeholder(R.drawable.ic_tutorial_loalty4x)).
+                Glide.with(this).load(R.drawable.poundland_banner)
+                .apply(new RequestOptions().placeholder(R.drawable.poundland_banner)).
                 into(binding.ivTopImage);
 
         return binding.getRoot();

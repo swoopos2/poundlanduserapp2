@@ -37,20 +37,6 @@
                 android:textSize="20sp" />
 
 
-            <TextView
-                android:id="@+id/tv_add_bookings"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerInParent="true"
-                android:layout_marginEnd="10dp"
-                android:fontFamily="@font/montserrat_medium"
-                android:padding="10dp"
-                android:text="Edit"
-                android:textAllCaps="false"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/color_white"
-                android:textSize="18dp" />
 
 
         </RelativeLayout>

@@ -13,6 +13,7 @@ import com.google.firebase.messaging.RemoteMessage;
 import com.google.gson.Gson;
 import com.poundland.retail.activity.MainActivity;
 import com.poundland.retail.appUtils.PrefManager;
+import com.poundland.retail.interfaces.Constants;
 
 import java.util.Map;
 
@@ -39,7 +40,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Log.d(TAG, "Notification Message From: " + remoteMessage.getFrom());
         if (remoteMessage == null)
             return;
-        android.os.Debug.waitForDebugger();
+        //android.os.Debug.waitForDebugger();
 
         if (remoteMessage.getNotification() != null) {
             Log.d(TAG, "Notification Message Body: " + remoteMessage.getNotification().getBody());
@@ -161,5 +162,12 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     public void onNewToken(String token) {
         Log.d(TAG, "Refreshed token: " + token);
         FirebaseMessaging.getInstance().subscribeToTopic(Config.TOPIC_GLOBAL);
+    }
+
+    private void storeRegIdInPref(String token) {
+        FirebaseMessaging.getInstance().subscribeToTopic(Config.TOPIC_GLOBAL);
+
+        /*pref.savePreference(Constants.IS_FIREBASE_TOKEN_UPDATE, false);
+        pref.savePreference(Constants.FIREBASE_TOKEN, token);*/
     }
 }

@@ -42,8 +42,8 @@ public class TutorialThreeFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_tutorial_three, container, false);
 
-        Glide.with(this).load(R.drawable.ic_tutorial_table_reservation4x)
-                .apply(new RequestOptions().placeholder(R.drawable.ic_tutorial_table_reservation4x)).
+        Glide.with(this).load(R.drawable.poundland_banner)
+                .apply(new RequestOptions().placeholder(R.drawable.poundland_banner)).
                 into(binding.ivTopImage);
 
         return binding.getRoot();

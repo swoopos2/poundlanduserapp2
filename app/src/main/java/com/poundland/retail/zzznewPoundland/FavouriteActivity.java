@@ -41,7 +41,7 @@ public class FavouriteActivity extends BaseActivity implements View.OnClickListe
     private void init() {
         instance = this;
         prefManager = PrefManager.getInstance(this);
-        binding.title.setText(getString(R.string.payment_details));
+        binding.title.setText(getString(R.string.favorite_ven_pro));
     }
 
     private void setFavVenueAdapter() {

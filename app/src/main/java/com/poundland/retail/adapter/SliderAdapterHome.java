@@ -12,6 +12,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.poundland.retail.R;
+import com.poundland.retail.apiUtils.ApiRequestUrl;
 import com.poundland.retail.interfaces.DrawerListner;
 
 import java.util.ArrayList;
@@ -63,26 +64,39 @@ public class SliderAdapterHome extends PagerAdapter {
         ImageView imageView = view.findViewById(R.id.image_view_slider);
         final ViewPager viewPager = (ViewPager) container;
 
+
+///////////////////////////
         if (isFitXy)
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-        if (position == 0) {
-            Glide.with(context).load(/*ApiRequestUrl.BASE_URL_VENUE + imageList.get(position)*/"").apply(new RequestOptions()
-                    .placeholder(R.drawable.poundland_banner))
-                    .error(R.drawable.poundland_banner)
+        if (store == STORE) {
+            Glide.with(context).load(ApiRequestUrl.BASE_URL_VENUE + imageList.get(position)).apply(new RequestOptions()
+                    .placeholder(R.drawable.app_logo_poundland))
+                    .error(R.drawable.app_logo_poundland)
                     .into(imageView);
             store = STORE;
-        } else if (position == 1) {
-            Glide.with(context).load(""/*ApiRequestUrl.BASE_URL + imageList.get(position)*/).apply(new RequestOptions()
-                    .placeholder(R.drawable.poundland_banner2))
-                    .error(R.drawable.poundland_banner2)
-                    .into(imageView);
-            store = -1;
         } else {
-            Glide.with(context).load(""/*ApiRequestUrl.BASE_URL + imageList.get(position)*/).apply(new RequestOptions()
-                    .placeholder(R.drawable.poundland_banner_3))
-                    .error(R.drawable.poundland_banner_3)
-                    .into(imageView);
+            store = -1;
+            if (position == 0) {
+                Glide.with(context).load(/*ApiRequestUrl.BASE_URL_VENUE + imageList.get(position)*/"").apply(new RequestOptions()
+                        .placeholder(R.drawable.poundland_banner))
+                        .error(R.drawable.poundland_banner)
+                        .into(imageView);
+            } else if (position == 1) {
+                Glide.with(context).load(""/*ApiRequestUrl.BASE_URL + imageList.get(position)*/).apply(new RequestOptions()
+                        .placeholder(R.drawable.poundland_banner2))
+                        .error(R.drawable.poundland_banner2)
+                        .into(imageView);
+
+            } else {
+                Glide.with(context).load(""/*ApiRequestUrl.BASE_URL + imageList.get(position)*/).apply(new RequestOptions()
+                        .placeholder(R.drawable.poundland_banner_3))
+                        .error(R.drawable.poundland_banner_3)
+                        .into(imageView);
+            }
         }
+
+
+
 
        /* view.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

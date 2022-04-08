@@ -283,11 +283,12 @@ public class MainActivity extends BaseActivity implements DrawerListner, View.On
     }
 
     void setupDrawerToggle() {
-        DataModel[] drawerItem = new DataModel[15];
+        DataModel[] drawerItem = new DataModel[14];
         drawerItem[0] = new DataModel(R.drawable.ic_qr_scan, getString(R.string.pay_go));
         drawerItem[1] = new DataModel(R.drawable.ic_loyalty_stamp_voucher, getString(R.string.loy_stamp_voucher));  //  | Stamps | Vouchers
         drawerItem[2] = new DataModel(R.drawable.ic_my_order, getString(R.string.my_orders));
-        drawerItem[3] = new DataModel(R.drawable.ic_booking, getString(R.string.my_bookings));
+       // drawerItem[3] = new DataModel(R.drawable.ic_booking, getString(R.string.my_bookings));
+        drawerItem[3] = new DataModel(R.drawable.ic_loyalty, getString(R.string.loyalty));
         drawerItem[4] = new DataModel(R.drawable.ic_message, getString(R.string.invite));
         drawerItem[5] = new DataModel(R.drawable.ic_wishlist, getString(R.string.wishlist));
         drawerItem[6] = new DataModel(R.drawable.ic_payment_details, getString(R.string.payment_details));
@@ -297,9 +298,10 @@ public class MainActivity extends BaseActivity implements DrawerListner, View.On
         drawerItem[10] = new DataModel(R.drawable.selected_indicator, getString(R.string.i_want_to));
         drawerItem[11] = new DataModel(R.drawable.ic_home, getString(R.string.my_loyalty_points));
         // drawerItem[9] = new DataModel(R.drawable.ic_share, getString(R.string.refer_a_friend));
-        drawerItem[12] = new DataModel(R.drawable.ic_nearby_deals, getString(R.string.nearby_deals));
-        drawerItem[13] = new DataModel(R.drawable.ic_store_blue, getString(R.string.favorite_ven_pro));
-        drawerItem[14] = new DataModel(R.drawable.ic_loyalty, getString(R.string.loyalty));
+        drawerItem[12] = new DataModel(R.drawable.ic_store_blue, getString(R.string.favorite_ven_pro));
+        drawerItem[13] = new DataModel(R.drawable.ic_nearby_deals, getString(R.string.nearby_deals));
+
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -391,8 +393,10 @@ public class MainActivity extends BaseActivity implements DrawerListner, View.On
                 break;
             case 3:
                 binding.drawerLayout.closeDrawers();
-                Intent myOrderReservation = new Intent(this, MyOrderReservationActivity.class);
-                startActivity(myOrderReservation);
+                QR_Model qr_model = new QR_Model(String.valueOf(prefManager.getPreference(LOGIN_ID, 0)), QR_CODE_CUST);
+                String qrData = new Gson().toJson(qr_model);
+                DialogUtils.scanLoyaltyDialog(this, qrData, getString(R.string.qr_code_message));
+
                 break;
 
             case 4:
@@ -428,22 +432,14 @@ public class MainActivity extends BaseActivity implements DrawerListner, View.On
                 startActivity(intent);
                 break;
             case 12:
-                Intent nearByDeals = new Intent(this, NearByDealsActivity.class);
-                nearByDeals.putExtra(TOP_OFFER_TITLE, getString(R.string.nearby_deals));
-                startActivity(nearByDeals);
-                break;
-            case 13:
                 Intent upcomingVenue = new Intent(this, FavouriteActivity.class);
-                //  Intent upcomingVenue = new Intent(this, UpcomingVenueActivity.class);
                 upcomingVenue.putExtra(TOP_OFFER_TITLE, getString(R.string.upcoming_venue));
                 startActivity(upcomingVenue);
                 break;
-            case 14:
-                binding.drawerLayout.closeDrawers();
-                QR_Model qr_model = new QR_Model(String.valueOf(prefManager.getPreference(LOGIN_ID, 0)), QR_CODE_CUST);
-                String qrData = new Gson().toJson(qr_model);
-                DialogUtils.scanLoyaltyDialog(this, qrData, getString(R.string.qr_code_message));
-
+            case 13:
+                Intent nearByDeals = new Intent(this, NearByDealsActivity.class);
+                nearByDeals.putExtra(TOP_OFFER_TITLE, getString(R.string.nearby_deals));
+                startActivity(nearByDeals);
                 break;
             default:
                 break;
@@ -507,13 +503,13 @@ public class MainActivity extends BaseActivity implements DrawerListner, View.On
     @Override
     protected void onRestart() {
         super.onRestart();
-        if (prefManager.getPreference(PROFILE_IMAGE, "").contains("uploaded/profile/")) {
-            Glide.with(this).load(BASE_URL + prefManager.getPreference(PROFILE_IMAGE, ""))
-                    .apply(RequestOptions.circleCropTransform()).into(navHeaderMainBinding.ivProfile);
-        } else {
-            Glide.with(this).load(prefManager.getPreference(PROFILE_IMAGE, ""))
-                    .apply(RequestOptions.circleCropTransform()).into(navHeaderMainBinding.ivProfile);
-        }
+        navHeaderMainBinding.tvUserName.setText("Lee Nazari");
+
+
+        Glide.with(this).load("")
+                .apply(RequestOptions.circleCropTransform())
+                .placeholder(R.drawable.ic_app_icon)
+                .into(navHeaderMainBinding.ivProfile);
     }
 
     @Override

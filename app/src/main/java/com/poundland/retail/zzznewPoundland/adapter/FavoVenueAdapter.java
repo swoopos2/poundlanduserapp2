@@ -62,7 +62,7 @@ public class FavoVenueAdapter extends RecyclerView.Adapter<FavoVenueAdapter.View
         holder.binding.tvNoOrders.setText(data.get(position).getId()+" Order");
         holder.binding.tvVenueName.setText(data.get(position).getCat_name());
         holder.binding.rbRating.setRating(data.get(position).getMenu_level());
-        Glide.with(mContext).load(ApiRequestUrl.BASE_URL_IMAGE_CATEGORY + data.get(position).getImage()).apply(new RequestOptions()
+        Glide.with(mContext).load(ApiRequestUrl.BASE_URL_VENUE + data.get(position).getImage()).apply(new RequestOptions()
                 .placeholder(R.drawable.ic_app_icon))
                 .into(holder.binding.venueImg);
     }

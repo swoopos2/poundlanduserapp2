@@ -43,8 +43,8 @@ public class TutorialTwoFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_tutorial_two, container, false);
-        Glide.with(this).load(R.drawable.ic_tutorial_delivery4x)
-                .apply(new RequestOptions().placeholder(R.drawable.ic_tutorial_delivery4x)).
+        Glide.with(this).load(R.drawable.poundland_banner)
+                .apply(new RequestOptions().placeholder(R.drawable.poundland_banner)).
                 into(binding.ivTopImage);
         return binding.getRoot();
     }
