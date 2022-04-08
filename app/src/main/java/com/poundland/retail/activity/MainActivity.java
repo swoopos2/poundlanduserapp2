@@ -104,6 +104,7 @@ import static com.poundland.retail.interfaces.Constants.LONGITUDE;
 import static com.poundland.retail.interfaces.Constants.PROFILE_IMAGE;
 import static com.poundland.retail.interfaces.Constants.QR_CODE_CUST;
 import static com.poundland.retail.interfaces.Constants.TOP_OFFER_TITLE;
+import static com.poundland.retail.interfaces.Constants.USER_NAME;
 import static com.poundland.retail.interfaces.Constants.WHOLE_FILTER_API_DATA;
 
 public class MainActivity extends BaseActivity implements DrawerListner, View.OnClickListener {
@@ -203,7 +204,7 @@ public class MainActivity extends BaseActivity implements DrawerListner, View.On
         View view = binding.navView.getHeaderView(0);
         navHeaderMainBinding = DataBindingUtil.bind(view);
         //navHeaderMainBinding.tvUserName.setText(prefManager.getPreference(FIRST_NAME, "") + " " + prefManager.getPreference(LAST_NAME, ""));
-        navHeaderMainBinding.tvUserName.setText("Lee Nazari");
+        navHeaderMainBinding.tvUserName.setText(prefManager.getPreference(USER_NAME, "") );
 
 
         Glide.with(this).load("")
@@ -503,8 +504,7 @@ public class MainActivity extends BaseActivity implements DrawerListner, View.On
     @Override
     protected void onRestart() {
         super.onRestart();
-        navHeaderMainBinding.tvUserName.setText("Lee Nazari");
-
+        navHeaderMainBinding.tvUserName.setText(prefManager.getPreference(USER_NAME, "") );
 
         Glide.with(this).load("")
                 .apply(RequestOptions.circleCropTransform())

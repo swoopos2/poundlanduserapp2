@@ -49,11 +49,16 @@ public class LoyaltyPointsActivity extends BaseActivity implements View.OnClickL
             if (loyaltyPoints.getEarn_loyalty_points() > 0) {
                 binding.tvRecentAction.setVisibility(View.VISIBLE);
                 binding.cvRecentAction.setVisibility(View.VISIBLE);
-
-                binding.recentEarnLoyaltyPoint.setText(getResources().getString(R.string.you_earn_) + " " + loyaltyPoints.getEarn_loyalty_points());
-              //  binding.recentEarnLoyaltyPoint.setText(getResources().getString(R.string.you_earn, HelperClass.decimalFormatReturnString(loyaltyPoints.getEarn_loyalty_points())));
+                binding.recentEarnLoyaltyPoint.setText(getResources().getString(R.string.you_earn_) + " " +String.format("%.0f", loyaltyPoints.getEarn_loyalty_points()) );
                 binding.earnLoyaltyPoint.setText("+" + HelperClass.decimalFormatReturnString(loyaltyPoints.getEarn_loyalty_points()));
                 binding.recentOrderAmount.setText(getResources().getString(R.string.recent_order_amount, HelperClass.decimalFormat(this, (float) loyaltyPoints.getEarn_loyalty_points())));
+
+                binding.recentEarnLoyaltyPoint.setText(getResources().getString(R.string.you_earn_) + " " + loyaltyPoints.getEarn_loyalty_points());
+                binding.earnLoyaltyPoint.setText("+" + HelperClass.decimalFormatReturnString(loyaltyPoints.getEarn_loyalty_points()));
+                binding.recentOrderAmount.setText(getResources().getString(R.string.recent_order_amount, HelperClass.decimalFormat(this, (float) loyaltyPoints.getEarn_loyalty_points())));
+
+
+
             }
         } else {
             binding.recentEarnLoyaltyPoint.setText("");
@@ -64,12 +69,13 @@ public class LoyaltyPointsActivity extends BaseActivity implements View.OnClickL
 
     private void setListeners() {
         binding.ivBack.setOnClickListener(this);
+        binding.tvShare.setOnClickListener(this);
     }
 
 
     private void initObserve(UserLoginResponseModel.UserDataBean userDataBean) {
         if (userDataBean != null) {
-            binding.loyaltyPoints.setText(userDataBean.getLoyalty_points() + "Pts");
+            binding.loyaltyPoints.setText(HelperClass.removeDecimalshowString(userDataBean.getLoyalty_points() )+ "Pts");
         }
     }
 
@@ -78,6 +84,10 @@ public class LoyaltyPointsActivity extends BaseActivity implements View.OnClickL
         switch (v.getId()) {
             case R.id.iv_back:
                 finish();
+                break;
+
+            case R.id.tv_share:
+                HelperClass.shareApp(this, "Share Via", "");
                 break;
         }
     }

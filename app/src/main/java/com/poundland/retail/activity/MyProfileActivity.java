@@ -30,7 +30,6 @@ import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import com.poundland.retail.R;
 import com.poundland.retail.apiUtils.ApiClient;
 import com.poundland.retail.apiUtils.ApiInterface;
-import com.poundland.retail.apiUtils.ApiRequestUrl;
 import com.poundland.retail.appUtils.ImagePickerUtilNew;
 import com.poundland.retail.appUtils.PermissionsUtil;
 import com.poundland.retail.appUtils.PrefManager;
@@ -76,6 +75,7 @@ import static com.poundland.retail.interfaces.Constants.PROFILE_IMAGE;
 import static com.poundland.retail.interfaces.Constants.SPECIAL_OFFER_ID;
 import static com.poundland.retail.interfaces.Constants.TOKEN_TYPE;
 import static com.poundland.retail.interfaces.Constants.TOP_OFFER_TITLE;
+import static com.poundland.retail.interfaces.Constants.USER_NAME;
 
 public class MyProfileActivity extends BaseActivity implements View.OnClickListener {
     private ActivityMyProfileBinding binding;
@@ -92,6 +92,7 @@ public class MyProfileActivity extends BaseActivity implements View.OnClickListe
         setToolbar();
         setListeners();
         getProfile();
+
     }
 
     private void init() {
@@ -177,7 +178,7 @@ public class MyProfileActivity extends BaseActivity implements View.OnClickListe
 
                         }
 
-                        if (multiplePermissionsReport.isAnyPermissionPermanentlyDenied()){
+                        if (multiplePermissionsReport.isAnyPermissionPermanentlyDenied()) {
                             showSettingsDialog();
                         }
                     }
@@ -226,7 +227,6 @@ public class MyProfileActivity extends BaseActivity implements View.OnClickListe
         intent.setData(uri);
         startActivityForResult(intent, 101);
     }
-
 
 
     private boolean isValid() {
@@ -323,16 +323,15 @@ public class MyProfileActivity extends BaseActivity implements View.OnClickListe
                                 if (responseModel.getUser() != null) {
                                     prefManager.savePreference(PROFILE_IMAGE, responseModel.getUser().getProfile_image());
                                     if (responseModel.getUser().getProfile_image() != null && responseModel.getUser().getProfile_image().contains("uploaded/profile/")) {
-
-                                        Glide.with(instance).load(ApiRequestUrl.BASE_URL + responseModel.getUser().getProfile_image())
+// TODO :REMOVE DOUBLE QUOTE ITS FOR DEMO ONLY
+                                        Glide.with(instance).load("ApiRequestUrl.BASE_URL + responseModel.getUser().getProfile_image()")
+                                                .placeholder(R.drawable.app_logo_poundland)
                                                 .apply(RequestOptions.circleCropTransform()).into(binding.ivImage);
 
                                     } else {
 
-                                        Glide.with(instance).load(responseModel.getUser().getProfile_image())
+                                        Glide.with(instance).load("responseModel.getUser().getProfile_image()")
                                                 .apply(RequestOptions.circleCropTransform()).into(binding.ivImage);
-
-
 
 
                                     }
@@ -345,6 +344,10 @@ public class MyProfileActivity extends BaseActivity implements View.OnClickListe
                                     binding.tvDisplayLastName.setText(responseModel.getUser().getLast_name());
                                     binding.tvEmail.setText(responseModel.getUser().getEmail());
                                     binding.tvContactNo.setText(responseModel.getUser().getContact_no());
+
+
+                                    //TODO : FOR DEMO ONLY REMOVE IT FURTHER
+                                    binding.tvDisplayName.setText(PrefManager.getInstance(instance).getPreference(USER_NAME));
                                 }
                             } else {
                                 showSnackBar(binding.getRoot(), responseModel.getMessage());

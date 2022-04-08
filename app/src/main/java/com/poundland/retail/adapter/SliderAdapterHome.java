@@ -95,9 +95,6 @@ public class SliderAdapterHome extends PagerAdapter {
             }
         }
 
-
-
-
        /* view.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (openLargeDialog) {

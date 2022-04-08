@@ -1371,6 +1371,10 @@ public class HelperClass {
         return new BigDecimal(aDouble).setScale(2, BigDecimal.ROUND_HALF_DOWN).doubleValue();
     }
 
+    public static String removeDecimalshowString(double aDouble) {
+        return String.valueOf((int)aDouble);
+    }
+
     public static String decimalFormat(Context context, Float aFloat) {
         if (aFloat == null) {
             aFloat = 0f;

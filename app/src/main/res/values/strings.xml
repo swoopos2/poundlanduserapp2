@@ -679,5 +679,5 @@ Below is an example of the way 500px limits how users can use the site by using 
     <string name="loyalty_earn">You’re eligible for %spts on your recent shopping</string>
     <string name="select_fav_category">Select Favourite Category</string>
     <string name="my_loyalty_points">My Loyalty Points</string>
-    <string name="get_100_poundland_points_whenever_your_friend_sign_up_using_your_code">Get 100 Poundland Points whenever your friend sign up using your code</string>
+    <string name="get_100_poundland_points_whenever_your_friend_sign_up_using_your_code">Get 100 Poundland Points whenever your friends sign up using your code</string>
 </resources>
