@@ -1,7 +1,6 @@
 package com.poundland.retail.zzznewPoundland.model;
 
 import com.google.gson.annotations.SerializedName;
-import com.poundland.retail.zzznewPoundland.CommonResponse;
 
 public class UserLoginResponseModel extends CommonResponse {
 

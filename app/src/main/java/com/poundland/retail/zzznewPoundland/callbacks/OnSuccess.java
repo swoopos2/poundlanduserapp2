@@ -1,4 +1,4 @@
-package com.poundland.retail.zzznewPoundland;
+package com.poundland.retail.zzznewPoundland.callbacks;
 
 import com.poundland.retail.zzznewPoundland.model.UpdateLoyaltyPointsResponse;
 

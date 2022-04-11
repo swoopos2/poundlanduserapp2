@@ -1,4 +1,4 @@
-package com.poundland.retail.activity;
+package com.poundland.retail.zzznewPoundland.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -15,12 +16,20 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
 import com.kaopiz.kprogresshud.KProgressHUD;
 import com.poundland.retail.R;
+import com.poundland.retail.activity.BaseActivity;
+import com.poundland.retail.activity.MyCartActivity;
+import com.poundland.retail.activity.MyOrderActivity;
+import com.poundland.retail.activity.NearByDealsActivity;
+import com.poundland.retail.activity.NotificationActivity;
+import com.poundland.retail.activity.SpecialOfferDetailsActivity;
+import com.poundland.retail.activity.VenueDetailActivity;
 import com.poundland.retail.activityHospitality.MyCartHospitalityActivity;
 import com.poundland.retail.adapter.LoyaltyAdapter;
-import com.poundland.retail.adapter.StampAdapter;
+import com.poundland.retail.adapter.StampInnerCardAdapter;
 import com.poundland.retail.adapter.VoucherAdapter;
 import com.poundland.retail.apiUtils.ApiClient;
 import com.poundland.retail.apiUtils.ApiInterface;
+import com.poundland.retail.appUtils.HelperClass;
 import com.poundland.retail.appUtils.PrefManager;
 import com.poundland.retail.databinding.ActivityLoyaltyStampVoucherBinding;
 import com.poundland.retail.databinding.LayoutTabLoyaltyBinding;
@@ -33,6 +42,7 @@ import com.poundland.retail.model.requestModel.AllVenuesRequestModel;
 import com.poundland.retail.model.responseModel.GetCustomerLoyaltyResponseModel;
 import com.poundland.retail.model.responseModel.GetTotalCartResponseModel;
 import com.poundland.retail.notificationService.NotificationModel;
+import com.poundland.retail.zzznewPoundland.model.StampDataModel;
 
 import java.util.ArrayList;
 
@@ -93,6 +103,7 @@ public class LoyaltyStampVoucherActivity extends BaseActivity implements View.On
         list = new ArrayList<GetCustomerLoyaltyResponseModel.LoyaltyBean.DataBean>();
         setListeners();
         setTabs();
+        binding.llStampContent.setVisibility(View.GONE);
         getLoyalty(false);
     }
 
@@ -138,10 +149,18 @@ public class LoyaltyStampVoucherActivity extends BaseActivity implements View.On
     }
 
     private void setStampAdapter() {
-        StampAdapter stampAdapter = new StampAdapter(this, list, this);
-        final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        //    StampAdapter stampAdapter = new StampAdapter(this, list, this);
+        //    final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        //    binding.rvLsv.setLayoutManager(layoutManager);
+        //    binding.rvLsv.setAdapter(stampAdapter);
+
+        StampDataModel stampDataModel = new Gson().fromJson(HelperClass.stamp_content, StampDataModel.class);
+
+        StampInnerCardAdapter loyaltyAdapter = new StampInnerCardAdapter(this, stampDataModel.getListData(), this);
+        final GridLayoutManager layoutManager = new GridLayoutManager(this, 4);
         binding.rvLsv.setLayoutManager(layoutManager);
-        binding.rvLsv.setAdapter(stampAdapter);
+        binding.rvLsv.setAdapter(loyaltyAdapter);
+
     }
 
     private void setVoucherAdapter() {
@@ -180,13 +199,14 @@ public class LoyaltyStampVoucherActivity extends BaseActivity implements View.On
         // binding.tabLayout.addTab(binding.tabLayout.newTab().setText(getString(R.string.stamp)));
         binding.tabLayout.getTabAt(0).setCustomView(R.layout.layout_tab_loyalty);
         binding.tabLayout.getTabAt(1).setCustomView(R.layout.layout_tab_voucher);
-      //  binding.tabLayout.getTabAt(2).setCustomView(R.layout.layout_tab_stamp);
+        //  binding.tabLayout.getTabAt(2).setCustomView(R.layout.layout_tab_stamp);
         binding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 //  selectedTab = tab.getPosition();
                 switch (binding.tabLayout.getSelectedTabPosition()) {
                     case 0:
+                        binding.llStampContent.setVisibility(View.GONE);
                         setLoyaltyAdapter();
                        /* bindingLoyalty.llMain.setBackgroundColor(getResources().getColor(R.color.color_light_red));
                         bindingStamp.llMain.setBackgroundColor(getResources().getColor(R.color.color_et_bg));
@@ -194,9 +214,8 @@ public class LoyaltyStampVoucherActivity extends BaseActivity implements View.On
                         ImageViewCompat.setImageTintList(bindingLoyalty.ivTab, ColorStateList.valueOf(Color.parseColor("#8f8f8f"))); */
                         break;
                     case 1:
+                        binding.llStampContent.setVisibility(View.VISIBLE);
                         setStampAdapter();
-
-
                         break;
                     case 2:
                         setVoucherAdapter();

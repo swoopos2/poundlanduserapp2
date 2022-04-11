@@ -4,18 +4,29 @@
         android:id="@+id/rl_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_1sdp"
-        android:padding="@dimen/_1sdp"
+        android:layout_margin="@dimen/_5sdp"
         android:gravity="center"
-        android:minHeight="?android:attr/listPreferredItemHeightSmall">
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:padding="@dimen/_2sdp">
+
 
         <ImageView
-            android:id="@+id/textViewName"
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
-            android:src="@drawable/ic_app_icon"
-            android:background="@color/color_white"
-            android:scaleType="centerInside"/>
+            android:id="@+id/iv_stamp_bg"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/tv_stamp_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_20sdp"
+            android:visibility="gone" />
 
     </RelativeLayout>
 </layout>

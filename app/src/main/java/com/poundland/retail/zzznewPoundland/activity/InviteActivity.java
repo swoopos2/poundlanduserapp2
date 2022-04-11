@@ -1,4 +1,4 @@
-package com.poundland.retail.zzznewPoundland;
+package com.poundland.retail.zzznewPoundland.activity;
 
 import android.content.Intent;
 import android.os.Bundle;

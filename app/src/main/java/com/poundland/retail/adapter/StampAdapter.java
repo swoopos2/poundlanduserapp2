@@ -22,9 +22,10 @@ import static com.poundland.retail.interfaces.Constants.STAMP;
 
 public class StampAdapter extends RecyclerView.Adapter<StampAdapter.ViewResource> implements DrawerListner {
 
-   private Context context;
+    private Context context;
     DrawerListner drawerListner;
     private List<GetCustomerLoyaltyResponseModel.LoyaltyBean.DataBean> rollAccessList;
+
     public StampAdapter(Context context, ArrayList<GetCustomerLoyaltyResponseModel.LoyaltyBean.DataBean> rollAccessList, DrawerListner drawerListner) {
         this.context = context;
         this.rollAccessList = rollAccessList;
@@ -43,24 +44,25 @@ public class StampAdapter extends RecyclerView.Adapter<StampAdapter.ViewResource
     public void onBindViewHolder(@NonNull final StampAdapter.ViewResource holder, int position) {
 
 
-        holder.binding.cvMain.setOnClickListener(new View.OnClickListener() {
+        holder.binding.rlRecycleView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                drawerListner.onDrawerSelect(holder.getAdapterPosition(),STAMP);
+                drawerListner.onDrawerSelect(holder.getAdapterPosition(), STAMP);
             }
         });
 
-            StampInnerCardAdapter loyaltyAdapter = new StampInnerCardAdapter(context, rollAccessList, this);
-            final GridLayoutManager layoutManager = new GridLayoutManager(context, 4);
-            holder.binding.rvStampList.setLayoutManager(layoutManager);
-            holder.binding.rvStampList.setAdapter(loyaltyAdapter);
+      /*  StampInnerCardAdapter loyaltyAdapter = new StampInnerCardAdapter(context, rollAccessList, this);
+        final GridLayoutManager layoutManager = new GridLayoutManager(context, 4);
+        holder.binding.rvStampList.setLayoutManager(layoutManager);
+        holder.binding.rvStampList.setAdapter(loyaltyAdapter);*/
 
     }
 
 
     @Override
     public int getItemCount() {
-        return rollAccessList == null ? 0 : rollAccessList.size();
+      //  return rollAccessList == null ? 0 : rollAccessList.size();
+        return rollAccessList == null ? 0 : 1;
     }
 
     @Override

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lytHidden"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:minHeight="100dp"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+
+    <TextView
+        android:id="@+id/tv_stamp_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        android:padding="15dp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textColor="@color/red_transparent"
+        android:text="You have unlocked this stamp successfully"/>
+
+
+  <!--  <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:padding="@dimen/_50sdp"
+        android:src="@drawable/app_logo_poundland" />-->
+
+</RelativeLayout>

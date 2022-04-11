@@ -80,13 +80,13 @@ public class WishlistProductAdapter extends RecyclerView.Adapter<WishlistProduct
         holder.binding.tvPrice.setText((mContext.getString(R.string.from_price) + data.get(position).getMin_price() + "-" + mContext.getString(R.string.pound) + data.get(position).getMax_price()));
         holder.binding.tvMatchCount.setText(/*String.valueOf(*/data.get(position).getMatch_count() + mContext.getString(R.string.matches));
 
-        Glide.with(mContext).load(ApiRequestUrl.BASE_URL + data.get(position).getImages()).apply(new RequestOptions()
+        Glide.with(mContext).load(/*ApiRequestUrl.BASE_URL +*/ data.get(position).getImages()).apply(new RequestOptions()
                 .placeholder(R.drawable.ic_app_icon))
                 .into(holder.binding.ivCatImage);
         holder.binding.cvMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                drawerListner.onDrawerSelect(holder.getAdapterPosition(), WISHLIST);
+              //  drawerListner.onDrawerSelect(holder.getAdapterPosition(), WISHLIST);
             }
         });
 

@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.poundland.retail.R;
-import com.poundland.retail.zzznewPoundland.OnMultiSelectionListener;
+import com.poundland.retail.zzznewPoundland.callbacks.OnMultiSelectionListener;
 
 import java.util.ArrayList;
 import java.util.List;

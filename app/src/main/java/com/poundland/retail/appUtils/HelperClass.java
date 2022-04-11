@@ -1474,14 +1474,14 @@ public class HelperClass {
             "        \"merchant_id\": \"15\",\n" +
             "        \"created_at\": \"2021-04-25 16:02:47\",\n" +
             "        \"updated_at\": \"2022-02-01 06:31:13\",\n" +
-            "        \"product_name\": \"Amayra Women's Cotton Straight Top(Blue)\",\n" +
+            "        \"product_name\": \"Cadbury Twirl Bites 95g\",\n" +
             "        \"product_type\": \"1\",\n" +
-            "        \"images\": \"uploaded\\/products\\/1134816174375080.jpeg\",\n" +
+            "        \"images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/3/2/321037.jpg\",\n" +
             "        \"brand_id\": null,\n" +
             "        \"modifier_name\": \"M,Pink\",\n" +
             "        \"selling_price\": \"11.00\",\n" +
             "        \"avl_quantity\": \"49931\",\n" +
-            "        \"modifier_images\": \"uploaded\\/products\\/8700715990269570.png\",\n" +
+            "        \"modifier_images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/3/2/321037.jpg\",\n" +
             "        \"venue_name\": \"Go Amazon Retail\",\n" +
             "        \"venue_type\": \"1\",\n" +
             "        \"latitude\": \"52.586973\",\n" +
@@ -1512,14 +1512,14 @@ public class HelperClass {
             "        \"merchant_id\": \"15\",\n" +
             "        \"created_at\": \"2021-04-09 06:03:15\",\n" +
             "        \"updated_at\": \"2021-04-09 06:03:15\",\n" +
-            "        \"product_name\": \"VERO MODA Women's Checkered Regular Fit Top\",\n" +
+            "        \"product_name\": \"Milkyway Magic Stars Pouch\",\n" +
             "        \"product_type\": \"1\",\n" +
-            "        \"images\": \"uploaded\\/products\\/3888116174366181.jpeg\",\n" +
+            "        \"images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/1/7/171743.jpg\",\n" +
             "        \"brand_id\": \"24\",\n" +
             "        \"modifier_name\": \"Prism violet,64GB\",\n" +
             "        \"selling_price\": \"50.00\",\n" +
             "        \"avl_quantity\": \"896\",\n" +
-            "        \"modifier_images\": \"uploaded\\/products\\/4498615983565820.png\",\n" +
+            "        \"modifier_images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/1/7/171743.jpg\",\n" +
             "        \"venue_name\": \"Go Amazon Retail\",\n" +
             "        \"venue_type\": \"1\",\n" +
             "        \"latitude\": \"52.586973\",\n" +
@@ -1550,14 +1550,14 @@ public class HelperClass {
             "        \"merchant_id\": \"15\",\n" +
             "        \"created_at\": \"2021-04-07 12:23:57\",\n" +
             "        \"updated_at\": \"2021-04-07 12:23:57\",\n" +
-            "        \"product_name\": \"MALLORY WINSTON Women's Top\",\n" +
+            "        \"product_name\": \"Riesen Bag 135g\",\n" +
             "        \"product_type\": \"1\",\n" +
-            "        \"images\": \"uploaded\\/products\\/7179116174365200.jpeg\",\n" +
+            "        \"images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/1/1/117824.jpg\",\n" +
             "        \"brand_id\": \"209\",\n" +
             "        \"modifier_name\": null,\n" +
             "        \"selling_price\": \"1.09\",\n" +
             "        \"avl_quantity\": \"0\",\n" +
-            "        \"modifier_images\": \"uploaded\\/products\\/6343816153720167.jpeg\",\n" +
+            "        \"modifier_images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/1/1/117824.jpg\",\n" +
             "        \"venue_name\": \"Go Amazon Retail\",\n" +
             "        \"venue_type\": \"1\",\n" +
             "        \"latitude\": \"52.586973\",\n" +
@@ -1588,14 +1588,14 @@ public class HelperClass {
             "        \"merchant_id\": \"21\",\n" +
             "        \"created_at\": \"2021-04-06 07:26:14\",\n" +
             "        \"updated_at\": \"2021-04-06 08:05:56\",\n" +
-            "        \"product_name\": \"Amayra Women's Cotton Straight Top(Blue)\",\n" +
+            "        \"product_name\": \"Nestle After Eight Munchies\",\n" +
             "        \"product_type\": \"1\",\n" +
-            "        \"images\": \"uploaded\\/products\\/1134816174375080.jpeg\",\n" +
+            "        \"images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/3/6/364041.jpg\",\n" +
             "        \"brand_id\": \"245\",\n" +
             "        \"modifier_name\": null,\n" +
             "        \"selling_price\": \"8.00\",\n" +
             "        \"avl_quantity\": \"49993\",\n" +
-            "        \"modifier_images\": \"\",\n" +
+            "        \"modifier_images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/3/6/364041.jpg\",\n" +
             "        \"venue_name\": \"Poundland Bilston\",\n" +
             "        \"venue_type\": \"1\",\n" +
             "        \"latitude\": \"51.5073509\",\n" +
@@ -1626,14 +1626,14 @@ public class HelperClass {
             "        \"merchant_id\": \"21\",\n" +
             "        \"created_at\": \"2021-04-06 07:26:11\",\n" +
             "        \"updated_at\": \"2021-04-06 08:06:13\",\n" +
-            "        \"product_name\": \"Women Blue Woven Design Float Ride Run 2.0 Running Shoes\",\n" +
+            "        \"product_name\": \"Balloon Bag\",\n" +
             "        \"product_type\": \"1\",\n" +
-            "        \"images\": \"uploaded\\/products\\/3815815978366430.png\",\n" +
+            "        \"images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/4/7/472966.jpg\",\n" +
             "        \"brand_id\": \"26\",\n" +
             "        \"modifier_name\": null,\n" +
             "        \"selling_price\": \"12.00\",\n" +
             "        \"avl_quantity\": \"49995\",\n" +
-            "        \"modifier_images\": \"\",\n" +
+            "        \"modifier_images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/4/7/472966.jpg\",\n" +
             "        \"venue_name\": \"Poundland Bilston\",\n" +
             "        \"venue_type\": \"1\",\n" +
             "        \"latitude\": \"51.5073509\",\n" +
@@ -1664,14 +1664,14 @@ public class HelperClass {
             "        \"merchant_id\": \"21\",\n" +
             "        \"created_at\": \"2021-04-06 07:26:07\",\n" +
             "        \"updated_at\": \"2021-04-06 08:05:04\",\n" +
-            "        \"product_name\": \"Budweiser Streetwear Co\",\n" +
+            "        \"product_name\": \"Navy Rectangle Gift Bag\",\n" +
             "        \"product_type\": \"1\",\n" +
-            "        \"images\": \"uploaded\\/products\\/2807816034567470.jpeg\",\n" +
+            "        \"images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/4/4/444473.jpg\",\n" +
             "        \"brand_id\": \"7\",\n" +
             "        \"modifier_name\": null,\n" +
             "        \"selling_price\": \"10.00\",\n" +
             "        \"avl_quantity\": \"49993\",\n" +
-            "        \"modifier_images\": \"\",\n" +
+            "        \"modifier_images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/4/4/444473.jpg\",\n" +
             "        \"venue_name\": \"Poundland Bilston\",\n" +
             "        \"venue_type\": \"1\",\n" +
             "        \"latitude\": \"51.5073509\",\n" +
@@ -1702,14 +1702,14 @@ public class HelperClass {
             "        \"merchant_id\": \"15\",\n" +
             "        \"created_at\": \"2021-02-17 09:35:38\",\n" +
             "        \"updated_at\": \"2022-04-06 10:44:40\",\n" +
-            "        \"product_name\": \"Women Black Solid Rapid-Dry Training Tights\",\n" +
+            "        \"product_name\": \"Dinosaur/stars Xl Bag 2pk\",\n" +
             "        \"product_type\": \"1\",\n" +
-            "        \"images\": \"uploaded\\/products\\/4878115978363290.png\",\n" +
+            "        \"images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/4/4/444471.jpg\",\n" +
             "        \"brand_id\": \"42\",\n" +
             "        \"modifier_name\": null,\n" +
             "        \"selling_price\": \"19.00\",\n" +
             "        \"avl_quantity\": \"990\",\n" +
-            "        \"modifier_images\": \"uploaded\\/products\\/4878115978363290.png\",\n" +
+            "        \"modifier_images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/4/4/444471.jpg\",\n" +
             "        \"venue_name\": \"Go Amazon Retail\",\n" +
             "        \"venue_type\": \"1\",\n" +
             "        \"latitude\": \"52.586973\",\n" +
@@ -1740,14 +1740,14 @@ public class HelperClass {
             "        \"merchant_id\": \"15\",\n" +
             "        \"created_at\": \"2021-02-15 13:22:59\",\n" +
             "        \"updated_at\": \"2021-02-15 13:22:59\",\n" +
-            "        \"product_name\": \"Women Navy Solid 3\\/4th Length Yoga Track Pants\",\n" +
+            "        \"product_name\": \"Mickey & Minnie Gift Bags - Single Bag\",\n" +
             "        \"product_type\": \"1\",\n" +
-            "        \"images\": \"uploaded\\/products\\/3090615978361680.png\",\n" +
+            "        \"images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/4/4/449245.jpg\",\n" +
             "        \"brand_id\": \"24\",\n" +
             "        \"modifier_name\": null,\n" +
             "        \"selling_price\": \"50.00\",\n" +
             "        \"avl_quantity\": \"1\",\n" +
-            "        \"modifier_images\": \"uploaded\\/products\\/3090615978361680.png\",\n" +
+            "        \"modifier_images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/4/4/449245.jpg\",\n" +
             "        \"venue_name\": \"Go Amazon Retail\",\n" +
             "        \"venue_type\": \"1\",\n" +
             "        \"latitude\": \"52.586973\",\n" +
@@ -1778,14 +1778,14 @@ public class HelperClass {
             "        \"merchant_id\": \"5\",\n" +
             "        \"created_at\": \"2021-02-15 11:09:21\",\n" +
             "        \"updated_at\": \"2021-02-15 11:09:21\",\n" +
-            "        \"product_name\": \"Women Black Solid Cropped Jersey Strappy Top\",\n" +
+            "        \"product_name\": \"Unicorn/star Xl Bag 2pk\",\n" +
             "        \"product_type\": \"2\",\n" +
-            "        \"images\": \"uploaded\\/products\\/3856415979216540.png\",\n" +
+            "        \"images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/4/4/444469.jpg\",\n" +
             "        \"brand_id\": \"177\",\n" +
             "        \"modifier_name\": \"\",\n" +
             "        \"selling_price\": \"3.99\",\n" +
             "        \"avl_quantity\": \"50000\",\n" +
-            "        \"modifier_images\": \"uploaded\\/products\\/3856415979216540.png\",\n" +
+            "        \"modifier_images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/4/4/444469.jpg\",\n" +
             "        \"venue_name\": \"Vik Grocery\",\n" +
             "        \"venue_type\": \"2\",\n" +
             "        \"latitude\": \"52.5756465\",\n" +
@@ -1816,14 +1816,14 @@ public class HelperClass {
             "        \"merchant_id\": \"15\",\n" +
             "        \"created_at\": \"2021-02-15 08:39:20\",\n" +
             "        \"updated_at\": \"2021-02-15 08:39:20\",\n" +
-            "        \"product_name\": \"Unisex White & Green DMX Trail Shadow Colourblocked Running Shoes\",\n" +
+            "        \"product_name\": \"Glitter Gift Bags 2pk\",\n" +
             "        \"product_type\": \"1\",\n" +
-            "        \"images\": \"uploaded\\/products\\/2463115995701610.png\",\n" +
+            "        \"images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/3/0/309069-1.jpg\",\n" +
             "        \"brand_id\": \"5\",\n" +
             "        \"modifier_name\": null,\n" +
             "        \"selling_price\": \"12.00\",\n" +
             "        \"avl_quantity\": \"50000\",\n" +
-            "        \"modifier_images\": \"uploaded\\/products\\/2463115995701610.png\",\n" +
+            "        \"modifier_images\": \"https://www.poundland.co.uk/media/catalog/product/cache/284baa039cd1fcd34f11eed8f6c32071/3/0/309069-1.jpg\",\n" +
             "        \"venue_name\": \"Next\",\n" +
             "        \"venue_type\": \"1\",\n" +
             "        \"latitude\": \"52.5875483\",\n" +
@@ -1855,4 +1855,60 @@ public class HelperClass {
             "    \"total\": 118\n" +
             "  }\n" +
             "}";
+
+
+    public static String stamp_content = "{\n" +
+            "  \"ListData\": [\n" +
+            "    {\n" +
+            "      \"stampType\": \"4\",\n" +
+            "      \"stampNo\": \"1\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"stampType\": \"4\",\n" +
+            "      \"stampNo\": \"2\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"stampType\": \"3\",\n" +
+            "      \"stampNo\": \"3\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"stampType\": \"2\",\n" +
+            "      \"stampNo\": \"4\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"stampType\": \"1\",\n" +
+            "      \"stampNo\": \"5\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"stampType\": \"1\",\n" +
+            "      \"stampNo\": \"6\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"stampType\": \"1\",\n" +
+            "      \"stampNo\": \"7\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"stampType\": \"1\",\n" +
+            "      \"stampNo\": \"8\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"stampType\": \"1\",\n" +
+            "      \"stampNo\": \"9\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"stampType\": \"1\",\n" +
+            "      \"stampNo\": \"10\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"stampType\": \"1\",\n" +
+            "      \"stampNo\": \"11\"\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"stampType\": \"1\",\n" +
+            "      \"stampNo\": \"12\"\n" +
+            "    }\n" +
+            "  ]\n" +
+            "}";
+
+
 }

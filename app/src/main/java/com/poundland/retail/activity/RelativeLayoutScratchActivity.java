@@ -35,7 +35,7 @@ public class RelativeLayoutScratchActivity extends AppCompatActivity {
     /**
      * Using Raw View
      */
-    scratchRelativeLayoutView.setScratchView(R.layout.lyt_scratch);
+    scratchRelativeLayoutView.setScratchView(R.layout.lyt_scratch_me);
 
 
     scratchRelativeLayoutView.setRevealListener(new ScratchRelativeLayoutView.IRevealListener() {

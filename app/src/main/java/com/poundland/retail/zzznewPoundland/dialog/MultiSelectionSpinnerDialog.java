@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.poundland.retail.R;
-import com.poundland.retail.zzznewPoundland.OnMultiSelectionListener;
+import com.poundland.retail.zzznewPoundland.callbacks.OnMultiSelectionListener;
 import com.poundland.retail.zzznewPoundland.adapter.MultiSelectionRecyclerAdapter;
 import com.poundland.retail.zzznewPoundland.widget.MultiSpinner;
 

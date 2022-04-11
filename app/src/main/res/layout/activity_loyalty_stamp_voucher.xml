@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".activity.LoyaltyStampVoucherActivity">
+    tools:context=".zzznewPoundland.activity.LoyaltyStampVoucherActivity">
 
     <RelativeLayout
         style="@style/parentLayout"
@@ -18,9 +18,9 @@
                 android:layout_width="@dimen/_30sdp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_centerVertical="true"
-                android:padding="@dimen/_5sdp"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
                 android:src="@drawable/ic_back"
                 app:tint="@color/color_white" />
 
@@ -44,8 +44,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:layout_toStartOf="@+id/iv_cart"
-                android:src="@drawable/ic_notifications"
-              />
+                android:src="@drawable/ic_notifications" />
 
             <ImageView
                 android:id="@+id/iv_cart"
@@ -55,8 +54,8 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:padding="@dimen/_3sdp"
-                android:src="@drawable/ic_shopping_cart"
-                />
+                android:src="@drawable/ic_shopping_cart" />
+
             <TextView
                 android:id="@+id/tv_cart_count"
                 android:layout_width="@dimen/_18sdp"
@@ -64,12 +63,12 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="@dimen/_2sdp"
                 android:layout_marginEnd="@dimen/_25sdp"
-                android:textSize="@dimen/_8sdp"
-                android:textColor="@color/color_white"
+                android:background="@drawable/circle_red_drawable"
                 android:gravity="center"
                 android:maxLines="1"
-                android:visibility="invisible"
-                android:background="@drawable/circle_red_drawable" />
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_8sdp"
+                android:visibility="invisible" />
 
 
         </RelativeLayout>
@@ -93,21 +92,156 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_lsv"
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:clipToPadding="true"
-                    />
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_stamp_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/color_blue"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:id="@+id/tv_loyalty_bal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:padding="@dimen/_10sdp"
+                                    android:text="Loyalty Balence"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:baselineAligned="false">
+
+                                    <ImageView
+                                        android:id="@+id/iv_trophy"
+                                        android:layout_width="@dimen/_100sdp"
+                                        android:layout_height="@dimen/_100sdp"
+                                        android:padding="@dimen/_15sdp"
+                                        android:src="@drawable/ic_app_icon" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_gravity="center"
+                                        android:layout_toEndOf="@+id/iv_trophy"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/_5sdp">
+
+
+                                        <TextView
+                                            android:id="@+id/tv_shop_name"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/montserrat_bold"
+                                            android:text="1240pts"
+                                            android:textColor="@color/app_color_2"
+                                            android:textSize="@dimen/_16sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_price"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_5sdp"
+                                            android:fontFamily="@font/montserrat_medium"
+                                            android:text="1200pts till your next reward"
+                                            android:textColor="@color/app_color_2"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                    </LinearLayout>
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_15sdp"
+                                    android:text="Give And Get Points"
+                                    android:textColor="@color/app_color_2"
+                                    android:textSize="@dimen/_13sdp" />
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:text="Get 100 Poundland Points whenever your friend sign up using your code"
+                                    android:textColor="@color/black5C5757"
+                                    android:textSize="@dimen/_13sdp" />
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/color_blue"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/_10sdp"
+                                    android:paddingBottom="@dimen/_10sdp"
+                                    android:text="Stamp Card"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="@dimen/_13sdp" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_lsv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="true" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
             </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
+
+            <!--No Data Found UI-->
             <LinearLayout
                 android:id="@+id/ll_no_data_found"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:padding="@dimen/_10sdp"
                 android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
                 android:visibility="gone">
 
                 <ImageView
@@ -116,17 +250,16 @@
                     android:layout_height="@dimen/_180sdp"
                     android:layout_centerInParent="true"
                     android:padding="@dimen/_20sdp"
-                    android:src="@drawable/ic_no_data_found"
-                    />
+                    android:src="@drawable/ic_no_data_found" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat_bold_italic"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_bold_italic"
+                    android:gravity="center"
                     android:paddingStart="@dimen/_10sdp"
                     android:paddingEnd="@dimen/_10sdp"
-                    android:gravity="center"
                     android:text="@string/no_loyalty"
                     android:textAllCaps="false"
                     android:textColor="@color/dark_grey"

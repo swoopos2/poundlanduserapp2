@@ -29,6 +29,8 @@
     <string name="euro">\u20ac 120.00</string>
     <string name="worth_pound">Worth \u00a3</string>
     <string name="pound">\u00a3</string>
+    <string name="stamp_used_">You used this stamp on 11 April 2022 at 15:30 and got \u00a3 200 discount on your purchase.</string>
+    <string name="stamp_unlock_">You unlocked this stamp on 10 April 2022 at 15:30 and can get a T-shirt from this store untill 22 April 2022.</string>
     <string name="pound_3">\u00a3 3</string>
     <string name="pound_2_5">\u00a3 2.5</string>
     <string name="percent">%</string>
@@ -48,6 +50,7 @@
     <string name="open">Open</string>
     <string name="close_caps">CLOSED</string>
     <string name="close">Closed</string>
+    <string name="close_xt">Close</string>
     <string name="delivery_charge">Delivery Charge:</string>
     <string name="Visa_Credit">Visa Credit</string>
     <string name="opening_soon">Opening Soon</string>
@@ -672,9 +675,11 @@ Below is an example of the way 500px limits how users can use the site by using 
     <string name="loyalty_balance">Loyalty Balance</string>
 
 
+    <string name="stamp_unlocked_successfully_text"> You have unlocked this stamp successfully!</string>
     <string name="redeem_upto_pound"> You can redeem upto \u00a3 1.50 on your next shopping</string>
     <string name="you_earn">You have earned %spts</string>
     <string name="you_earn_">You have earned </string>
+    <string name="you_earn_some_pound">You have earned \u00a3 2.50 voucher from this store.</string>
     <string name="recent_order_amount">%s at Poundland Store</string>
     <string name="loyalty_earn">You’re eligible for %spts on your recent shopping</string>
     <string name="select_fav_category">Select Favourite Category</string>

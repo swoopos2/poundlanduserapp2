@@ -24,12 +24,15 @@
 
             <com.goibibo.libs.views.ScratchRelativeLayoutView
                 android:id="@+id/scratch_card"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_centerInParent="true"
-                android:background="@color/color_light_red">
 
-                <include layout="@layout/lyt_hidden" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:minHeight="250dp"
+                android:background="@color/color_white_trans">
+
+                <include layout="@layout/lyt_scratched_hidden_content" />
 
             </com.goibibo.libs.views.ScratchRelativeLayoutView>
 
@@ -48,7 +51,7 @@
                 android:paddingTop="@dimen/_15sdp"
                 android:paddingEnd="@dimen/_45sdp"
                 android:paddingBottom="@dimen/_15sdp"
-                android:text="@string/done"
+                android:text="@string/close_xt"
                 android:textAllCaps="false"
                 android:textColor="@color/color_white"
                 android:textSize="@dimen/_13sdp" />

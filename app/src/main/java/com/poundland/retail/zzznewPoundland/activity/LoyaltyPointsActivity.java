@@ -1,4 +1,4 @@
-package com.poundland.retail.zzznewPoundland;
+package com.poundland.retail.zzznewPoundland.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +16,7 @@ import com.poundland.retail.appUtils.HelperClass;
 import com.poundland.retail.appUtils.PrefManager;
 import com.poundland.retail.databinding.ActivityLoyalityPointsBinding;
 import com.poundland.retail.interfaces.Constants;
+import com.poundland.retail.zzznewPoundland.ApiClientPLAND;
 import com.poundland.retail.zzznewPoundland.model.FetchCustomerRequest;
 import com.poundland.retail.zzznewPoundland.model.UpdateLoyaltyPointsResponse;
 import com.poundland.retail.zzznewPoundland.model.UserLoginResponseModel;

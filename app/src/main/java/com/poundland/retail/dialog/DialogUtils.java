@@ -25,8 +25,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -35,7 +33,6 @@ import com.goibibo.libs.views.ScratchTextView;
 import com.google.zxing.BarcodeFormat;
 import com.kaopiz.kprogresshud.KProgressHUD;
 import com.poundland.retail.R;
-import com.poundland.retail.adapter.CancellationReasonAdapter;
 import com.poundland.retail.apiUtils.ApiRequestUrl;
 import com.poundland.retail.appUtils.Contents;
 import com.poundland.retail.appUtils.FlipAnimator;
@@ -43,14 +40,12 @@ import com.poundland.retail.appUtils.HelperClass;
 import com.poundland.retail.appUtils.QRCodeEncoder;
 import com.poundland.retail.interfaces.DrawerListner;
 import com.poundland.retail.interfaces.OnDialogClickListener;
-import com.poundland.retail.model.responseModel.MyOrderResponseModel;
 import com.poundland.retail.notificationService.NotificationModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static android.content.Context.WINDOW_SERVICE;
-import static com.poundland.retail.interfaces.Constants.REPLACE_REFUND;
 
 public class DialogUtils {
 
@@ -696,6 +691,116 @@ public class DialogUtils {
         dialog.dismiss();
     }
 
+
+    public static void dialogScratchedSuccessfullyMessage(final Context context, String title, String body, String imgUrl, DrawerListner listner) {
+        dismissAll();
+        final Dialog dialog = new Dialog(context, android.R.style.Theme_Translucent_NoTitleBar);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.setCancelable(false);
+        dialog.setContentView(R.layout.dialog_scratched_successfully);
+
+        WindowManager.LayoutParams layoutParams = dialog.getWindow().getAttributes();
+        layoutParams.dimAmount = 0.7f;
+        layoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+        layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
+        dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+        dialog.getWindow().setAttributes(layoutParams);
+        dialog.getWindow().setWindowAnimations(R.style.AnimationCenterPopUp);
+        dialogList.add(dialog);
+        dialog.show();
+        // imgUrl=  BASE_URL+imgUrl;
+        final TextView tv_title = dialog.findViewById(R.id.tv_title);
+        final TextView tv_body = dialog.findViewById(R.id.tv_body);
+        final ImageView iv_logo = dialog.findViewById(R.id.iv_logo);
+        final TextView tv_shop_now = dialog.findViewById(R.id.tv_shop_now);
+        tv_shop_now.setText("Shop Now");
+
+
+
+        if (!TextUtils.isEmpty(title))
+            tv_title.setText(title);
+
+
+        if (!TextUtils.isEmpty(body))
+            tv_body.setText(body);
+
+        dialog.findViewById(R.id.tv_shop_now).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                listner.onDrawerSelect(0, 0);
+            }
+        });
+        dialog.findViewById(R.id.tv_cancel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+    }
+
+
+    public static void scratchStampForInfo(final Context context, String heading, String content, String imgUrl, final OnDialogClickListener listener) {
+        dismissAll();
+        final Dialog dialog = new Dialog(context, android.R.style.Theme_Translucent_NoTitleBar);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.setCancelable(false);
+        LayoutInflater inflater = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
+        dialog.setContentView(R.layout.activity_rl_scratch);
+
+        // dialog.findViewById(R.id.tv_done).setVisibility(View.GONE);  // HIDE DONE BUTTON AND OPEN NEXT VIEW ON SCRATCH
+
+        ScratchRelativeLayoutView scratchRelativeLayoutView = dialog.findViewById(R.id.scratch_card);
+        scratchRelativeLayoutView.setStrokeWidth(20);
+
+        // scratchRelativeLayoutView.setScratchView(R.layout.lyt_scratch);  // for activity
+
+        /**
+         Using Inflated View for dialog
+         */
+        final View scratchMeView = inflater.inflate(R.layout.lyt_scratch_me, scratchRelativeLayoutView, true);
+        scratchRelativeLayoutView.setScratchView(scratchMeView, scratchRelativeLayoutView);
+
+
+        scratchRelativeLayoutView.setRevealListener(new ScratchRelativeLayoutView.IRevealListener() {
+            @Override
+            public void onRevealed(ScratchRelativeLayoutView tv) {
+                // on reveal
+                //HelperClass.toast(context, "You scratched " + "");
+            }
+
+            @Override
+            public void onRevealPercentChangedListener(ScratchRelativeLayoutView siv, float percent) {
+
+                if (percent > 0.50){
+                    dialog.dismiss();
+                    listener.onPositiveClick();
+                }
+                // on percent change
+                //  HelperClass.toast(context, "You scratched " + percent + " %");
+            }
+        });
+
+        WindowManager.LayoutParams layoutParams = dialog.getWindow().getAttributes();
+        layoutParams.dimAmount = 0.7f;
+        layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT;
+        layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
+        dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+        dialog.getWindow().setAttributes(layoutParams);
+        dialog.getWindow().setWindowAnimations(R.style.AnimationCenterPopUp);
+        dialogList.add(dialog);
+        dialog.show();
+
+        dialog.findViewById(R.id.tv_done).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+    }
+
     public static void stampTextInfoDialog(final Context context, String heading, String content, String imgUrl, boolean isShowScratch) {
         dismissAll();
         final Dialog dialog = new Dialog(context, android.R.style.Theme_Translucent_NoTitleBar);
@@ -707,6 +812,26 @@ public class DialogUtils {
         final RelativeLayout rl_main = dialog.findViewById(R.id.rl_main);
         final ScratchTextView scratch_view_before = (ScratchTextView) dialog.findViewById(R.id.scratch_view_before);
         final TextView tv_scratch_view_after = (TextView) dialog.findViewById(R.id.tv_scratch_view_after);
+
+        TextView tv_heading = dialog.findViewById(R.id.tv_heading);
+        TextView tvorderNow = dialog.findViewById(R.id.tv_ok);
+        ImageView imageView = dialog.findViewById(R.id.iv_logo);
+
+
+        if (heading.equalsIgnoreCase("4")) {
+            tv_heading.setText("This stamp has been used.");
+            tv_scratch_view_after.setText(R.string.stamp_used_);
+            tvorderNow.setText("OK");
+            Glide.with(context).load("").apply(new RequestOptions()
+                    .placeholder(R.drawable.ic_red_circle_stamp_bg))
+                    .into(imageView);
+        } else {
+            tv_heading.setText("This stamp has not been redeemed.");
+            tv_scratch_view_after.setText(R.string.stamp_unlock_);
+            Glide.with(context).load("").apply(new RequestOptions()
+                    .placeholder(R.drawable.ic_green_circle_stamp_bg))
+                    .into(imageView);
+        }
 
         if (!isShowScratch) {
             scratch_view_before.setVisibility(View.GONE);
@@ -737,7 +862,7 @@ public class DialogUtils {
                 @Override
                 public void onRevealPercentChangedListener(ScratchTextView stv, float percent) {
                     // on percent reveal.
-                  //  HelperClass.toast(context, "You scratched " + percent + " %");
+                    //  HelperClass.toast(context, "You scratched " + percent + " %");
                 }
             });
         }
@@ -759,107 +884,6 @@ public class DialogUtils {
                 dialog.dismiss();
             }
         });
-    }
-
-    public static void stampImageInfoDialog(final Context context, String heading, String content, String imgUrl, final OnDialogClickListener listener) {
-        dismissAll();
-        final Dialog dialog = new Dialog(context, android.R.style.Theme_Translucent_NoTitleBar);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setCanceledOnTouchOutside(true);
-        dialog.setCancelable(false);
-        LayoutInflater inflater = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
-        dialog.setContentView(R.layout.activity_rl_scratch);
-
-        ScratchRelativeLayoutView scratchRelativeLayoutView = dialog.findViewById(R.id.scratch_card);
-        scratchRelativeLayoutView.setStrokeWidth(20);
-
-        // scratchRelativeLayoutView.setScratchView(R.layout.lyt_scratch);  // for activity
-
-        /**
-         Using Inflated View for dialog
-         */
-        final View scratchView = inflater.inflate(R.layout.lyt_scratch, scratchRelativeLayoutView, true);
-        scratchRelativeLayoutView.setScratchView(scratchView, scratchRelativeLayoutView);
-
-
-        scratchRelativeLayoutView.setRevealListener(new ScratchRelativeLayoutView.IRevealListener() {
-            @Override
-            public void onRevealed(ScratchRelativeLayoutView tv) {
-                // on reveal
-                HelperClass.toast(context, "You scratched " + "");
-            }
-
-            @Override
-            public void onRevealPercentChangedListener(ScratchRelativeLayoutView siv, float percent) {
-                // on percent change
-              //  HelperClass.toast(context, "You scratched " + percent + " %");
-            }
-        });
-
-        WindowManager.LayoutParams layoutParams = dialog.getWindow().getAttributes();
-        layoutParams.dimAmount = 0.7f;
-        layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT;
-        layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
-        dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
-        dialog.getWindow().setAttributes(layoutParams);
-        dialog.getWindow().setWindowAnimations(R.style.AnimationCenterPopUp);
-        dialogList.add(dialog);
-        dialog.show();
-
-        dialog.findViewById(R.id.tv_done).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-                listener.onPositiveClick();
-            }
-        });
-    }
-
-    public static void dialogReasonForCancellation(Context context, List<MyOrderResponseModel.ReturnReasonsBean> reasonsBeanList, final DrawerListner listener) {
-        dismissAll();
-        final Dialog dialog = new Dialog(context, android.R.style.Theme_Translucent_NoTitleBar);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setCanceledOnTouchOutside(true);
-        dialog.setCancelable(false);
-        dialog.setContentView(R.layout.dialog_reason_for_cancellation);
-
-        WindowManager.LayoutParams layoutParams = dialog.getWindow().getAttributes();
-        layoutParams.dimAmount = 0.7f;
-        layoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT;
-        layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
-        dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
-        dialog.getWindow().setAttributes(layoutParams);
-        dialog.getWindow().setWindowAnimations(R.style.AnimationCenterPopUp);
-        dialogList.add(dialog);
-        dialog.show();
-        RecyclerView recyclerView = dialog.findViewById(R.id.rv_reason_list);
-        final int[] reasonId = new int[1];
-        dialog.findViewById(R.id.iv_close).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
-
-        dialog.findViewById(R.id.tv_submit).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-                if (listener != null)
-                    listener.onDrawerSelect(reasonId[0], REPLACE_REFUND);
-            }
-        });
-
-        //  this.selectionListner = (MyOrderActivity) mContext;
-        CancellationReasonAdapter loyaltyStampVoucherAdapter = new CancellationReasonAdapter(context, reasonsBeanList, new DrawerListner() {
-            @Override
-            public void onDrawerSelect(int position, int clickId) {
-                reasonId[0] = position;
-            }
-        }, 0);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(context);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(loyaltyStampVoucherAdapter);
     }
 
     public static void orderSuccesDialog(Activity context, String message, boolean status, String totalAmountPayable, String email,

@@ -3,8 +3,6 @@ package com.poundland.retail.zzznewPoundland.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.poundland.retail.zzznewPoundland.CommonResponse;
-
 public class UpdateLoyaltyPointsResponse implements Parcelable {
     /**
      * status : true

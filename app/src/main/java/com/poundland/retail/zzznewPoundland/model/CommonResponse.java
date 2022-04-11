@@ -1,4 +1,4 @@
-package com.poundland.retail.zzznewPoundland;
+package com.poundland.retail.zzznewPoundland.model;
 
 import com.google.gson.annotations.SerializedName;
 

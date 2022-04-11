@@ -99,7 +99,7 @@
             android:paddingTop="@dimen/_15sdp"
             android:paddingEnd="@dimen/_45sdp"
             android:paddingBottom="@dimen/_15sdp"
-            android:text="@string/done"
+            android:text="@string/order_now"
             android:textAllCaps="false"
             android:textColor="@color/color_white"
             android:textSize="@dimen/_13sdp" />

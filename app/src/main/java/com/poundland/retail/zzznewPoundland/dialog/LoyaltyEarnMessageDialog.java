@@ -24,7 +24,7 @@ import com.poundland.retail.apiUtils.ApiInterface;
 import com.poundland.retail.appUtils.PrefManager;
 import com.poundland.retail.databinding.DialogLoyaltyEarnMessageBinding;
 import com.poundland.retail.zzznewPoundland.ApiClientPLAND;
-import com.poundland.retail.zzznewPoundland.OnSuccess;
+import com.poundland.retail.zzznewPoundland.callbacks.OnSuccess;
 import com.poundland.retail.zzznewPoundland.model.UpdateLoyaltyPointsRequest;
 import com.poundland.retail.zzznewPoundland.model.UpdateLoyaltyPointsResponse;
 
